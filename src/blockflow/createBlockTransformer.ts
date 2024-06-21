@@ -47,6 +47,7 @@ export const createBlockTransformer = <O>(
           renderer(block as any, {
             transformChildren: (blocks) => transform(blocks),
             transformRichText: opts.transformRichText,
+            key: index,
           }),
         );
       } else if (opts.defaultTransformFn) {

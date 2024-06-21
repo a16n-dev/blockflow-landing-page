@@ -1,6 +1,7 @@
 import { Client } from '@blockflow/client';
 import { notFound } from 'next/navigation';
 import Logo from '@/component/common/Logo/Logo';
+import { client } from '@/utils/client';
 
 const Home = async () => {
   const landingPage = await client.getDocumentBySlug(

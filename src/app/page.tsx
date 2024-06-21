@@ -1,17 +1,12 @@
-import { Client } from '@blockflow/client';
-import { notFound } from 'next/navigation';
-import Logo from '@/component/common/Logo/Logo';
-import { client } from '@/utils/client';
-
 const Home = async () => {
-  const landingPage = await client.getDocumentBySlug(
-    'pages',
-    'ce2jv37g-title-here',
-  );
-
-  if (!landingPage) {
-    notFound();
-  }
+  // const landingPage = await client.getDocumentBySlug(
+  //   'pages',
+  //   'ce2jv37g-title-here',
+  // );
+  //
+  // if (!landingPage) {
+  //   notFound();
+  // }
 
   return (
     <main className='flex flex-col min-h-screen'>
@@ -30,7 +25,6 @@ const Home = async () => {
           <div className={'h-[300px] bg-gray-300 rounded-xl'}></div>
         </div>
       </div>
-      <div>{JSON.stringify(landingPage)}</div>
     </main>
   );
 };

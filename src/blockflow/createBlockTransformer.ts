@@ -9,6 +9,7 @@ export type transformBlockFn<T extends NotionBlockType, O> = (
   ctx: {
     transformChildren: (blocks: NotionBlock[]) => O;
     transformRichText: (richText: NotionRichText) => O;
+    key: number | string;
   },
 ) => O;
 
@@ -36,10 +37,10 @@ export const createBlockTransformer = <O>(
 ): BlockTransformer<O> => {
   const transformFns = { ...opts.extend?.fns, ...opts.transformFns };
 
-  const transform = (blocks: NotionBlock[]) => {
+  const transform = (blocks: NotionBlock[] = []) => {
     const output: O[] = [];
 
-    blocks.forEach((block) => {
+    blocks.forEach((block, index) => {
       const renderer = transformFns[block.type];
       if (renderer) {
         output.push(
@@ -53,6 +54,7 @@ export const createBlockTransformer = <O>(
           opts.defaultTransformFn(block as any, {
             transformChildren: (blocks) => transform(blocks),
             transformRichText: opts.transformRichText,
+            key: index,
           }),
         );
       } else {

@@ -40,21 +40,21 @@ const mapColorToStyles = (color?: NotionColor) => {
     case 'gray_background':
       return 'bg-gray-500 text-white rounded-md px-1 py-0.5';
     case 'brown_background':
-      return 'bg-gray-500 text-white rounded-md px-1 py-0.5';
+      return 'bg-yellow-900 text-white rounded-md px-1 py-0.5';
     case 'orange_background':
-      return 'bg-gray-500 text-white rounded-md px-1 py-0.5';
+      return 'bg-orange-500 text-white rounded-md px-1 py-0.5';
     case 'yellow_background':
-      return 'bg-gray-500 text-white rounded-md px-1 py-0.5';
+      return 'bg-yellow-500 text-white rounded-md px-1 py-0.5';
     case 'green_background':
-      return 'bg-gray-500 text-white rounded-md px-1 py-0.5';
+      return 'bg-lime-600 text-white rounded-md px-1 py-0.5';
     case 'blue_background':
-      return 'bg-gray-500 text-white rounded-md px-1 py-0.5';
+      return 'bg-cyan-600 text-white rounded-md px-1 py-0.5';
     case 'purple_background':
-      return 'bg-gray-500 text-white rounded-md px-1 py-0.5';
+      return 'bg-purple-600 text-white rounded-md px-1 py-0.5';
     case 'pink_background':
-      return 'bg-gray-500 text-white rounded-md px-1 py-0.5';
+      return 'bg-fuchsia-600 text-white rounded-md px-1 py-0.5';
     case 'red_background':
-      return 'bg-gray-500 text-white rounded-md px-1 py-0.5';
+      return 'bg-red-600 text-white rounded-md px-1 py-0.5';
   }
 };
 

@@ -137,7 +137,12 @@ export const twLandingPageBlockTransformer = createBlockTransformer<ReactNode>({
   extend: twBlockTransformer,
   transformFns: {
     [NotionBlockType.Heading1]: (block, ctx) => (
-      <h2 className={'text-center pb-2 text-4xl font-medium'}>
+      <h2 className={'text-center pb-2 pt-16 text-4xl font-medium'}>
+        {ctx.transformRichText(block.content.richText)}
+      </h2>
+    ),
+    [NotionBlockType.Heading2]: (block, ctx) => (
+      <h2 className={'text-center pb-2 pt-16 text-2xl font-medium'}>
         {ctx.transformRichText(block.content.richText)}
       </h2>
     ),

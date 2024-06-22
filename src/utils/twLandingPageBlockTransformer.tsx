@@ -143,17 +143,21 @@ export const twLandingPageBlockTransformer = createBlockTransformer<ReactNode>({
     ),
     [NotionBlockType.Paragraph]: (block, ctx) => {
       // render button IF link, and color is blue background
-      // if (
-      //   block.content.color?.endsWith('background') &&
-      //   block.content.richText.length === 1 &&
-      //   block.content.richText[0].href
-      // ) {
-      //   return (
-      //     <button className={'self-center'}>
-      //       {block.content.richText[0].text}
-      //     </button>
-      //   );
-      // }
+      if (
+        block.content.color?.endsWith('background') &&
+        block.content.richText.length === 1 &&
+        block.content.richText[0].href
+      ) {
+        return (
+          <button
+            className={
+              'mx-auto bg-cyan-600 py-3 rounded-lg px-6 cursor-pointer text-white my-4'
+            }
+          >
+            {block.content.richText[0].text}
+          </button>
+        );
+      }
 
       return (
         <p className={'text-center text-lg font-light max-w-[600px] mx-auto'}>

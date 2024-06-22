@@ -55,7 +55,9 @@ const Home = async () => {
             <div className={'h-[300px] bg-gray-300 rounded-xl'}></div>
           </div>
         </div>
-        <div>{twLandingPageBlockTransformer.transform(landingPage.blocks)}</div>
+        <div className={'flex flex-col'}>
+          {twLandingPageBlockTransformer.transform(landingPage.blocks)}
+        </div>
       </div>
     </main>
   );

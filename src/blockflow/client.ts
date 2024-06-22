@@ -10,7 +10,7 @@ export class Client {
 
   constructor(apiKey: string) {
     this.axios = axios.create({
-      baseURL: 'https://api.a16n.dev/v1',
+      baseURL: 'https://api.blockflow.so/v1',
       headers: {
         'x-api-key': apiKey,
       },

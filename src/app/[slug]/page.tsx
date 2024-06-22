@@ -1,8 +1,21 @@
 import { client } from '@/utils/client';
 import { notFound } from 'next/navigation';
 import { renderRichText, twBlockTransformer } from '@/utils/twBlockTransformer';
+type Params = { params: { slug: string } };
 
-const DynamicPage = async ({ params }: { params: { slug: string } }) => {
+export async function generateMetadata({ params }: Params) {
+  const page = await client.getDocumentBySlug('pages', params.slug);
+
+  if (!page) {
+    notFound();
+  }
+
+  return {
+    title: `${page.name} | BlockFlow`,
+  };
+}
+
+const DynamicPage = async ({ params }: Params) => {
   // get page content
 
   const page = await client.getDocumentBySlug('pages', params.slug);

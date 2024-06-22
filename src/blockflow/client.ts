@@ -25,10 +25,10 @@ export class Client {
     return res.data;
   }
 
-  async getDocumentBySlug(
+  async getDocumentBySlug<T = unknown>(
     databaseSlug: string,
     documentSlug: string,
-  ): Promise<NotionDocumentDetails | null> {
+  ): Promise<NotionDocumentDetails<T> | null> {
     console.log(JSON.stringify(this.axios));
 
     const res = await this.axios.get(

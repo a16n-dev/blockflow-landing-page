@@ -13,7 +13,10 @@ interface landingPageProperties {
 }
 
 export async function generateMetadata() {
-  const page = await client.getDocumentBySlug('pages', 'index');
+  const page = await client.getDocumentBySlug<landingPageProperties>(
+    'pages',
+    'index',
+  );
 
   if (!page) {
     notFound();

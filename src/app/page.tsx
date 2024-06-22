@@ -4,11 +4,25 @@ import { notFound } from 'next/navigation';
 import { NotionRichText } from '@blockflow/notionTypes';
 import { renderRichText, twBlockTransformer } from '@/utils/twBlockTransformer';
 import { twLandingPageBlockTransformer } from '@/utils/twLandingPageBlockTransformer';
+import { notionRichTextToPlainText } from '@blockflow/utils';
 
 interface landingPageProperties {
   name: NotionRichText;
   subtitle: NotionRichText;
   created: string;
+}
+
+export async function generateMetadata() {
+  const page = await client.getDocumentBySlug('pages', 'index');
+
+  if (!page) {
+    notFound();
+  }
+
+  return {
+    title: `${page.name}`,
+    description: notionRichTextToPlainText(page.properties.subtitle),
+  };
 }
 
 const Home = async () => {

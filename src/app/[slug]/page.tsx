@@ -1,7 +1,14 @@
 import { client } from '@/utils/client';
 import { notFound } from 'next/navigation';
 import { renderRichText, twBlockTransformer } from '@/utils/twBlockTransformer';
+import { NotionRichText } from '@blockflow/notionTypes';
 type Params = { params: { slug: string } };
+
+interface pageProperties {
+  name: NotionRichText;
+  subtitle: NotionRichText;
+  created: string;
+}
 
 export async function generateMetadata({ params }: Params) {
   const page = await client.getDocumentBySlug('pages', params.slug);
@@ -18,7 +25,10 @@ export async function generateMetadata({ params }: Params) {
 const DynamicPage = async ({ params }: Params) => {
   // get page content
 
-  const page = await client.getDocumentBySlug('pages', params.slug);
+  const page = await client.getDocumentBySlug<pageProperties>(
+    'pages',
+    params.slug,
+  );
 
   if (!page) {
     notFound();

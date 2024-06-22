@@ -1,10 +1,15 @@
-import Logo from '@/component/common/Logo/Logo';
-import { client } from '@/utils/client';
-import { notFound } from 'next/navigation';
+import Logo from '@/components/common/Logo/Logo';
 import { NotionRichText } from '@blockflow/notionTypes';
-import { renderRichText, twBlockTransformer } from '@/utils/twBlockTransformer';
-import { twLandingPageBlockTransformer } from '@/utils/twLandingPageBlockTransformer';
-import { notionRichTextToPlainText } from '@blockflow/utils';
+
+import {
+  ArrowRightIcon,
+  BlocksIcon,
+  EditIcon,
+  FileJson2Icon,
+  MessageCircleMoreIcon,
+  PencilIcon,
+} from 'lucide-react';
+import NotionIcon from '@/components/common/NotionIcon/NotionIcon';
 
 interface landingPageProperties {
   name: NotionRichText;
@@ -42,7 +47,7 @@ const Home = async () => {
           className={'flex flex-col px-4 w-full max-w-[800px] mx-auto pb-32'}
         >
           <h2 className={'text-center text-4xl font-bold'}>
-            Easy <span className={'text-cyan-500'}>FAQs</span> and Developer
+            Easy <span className={'text-blue-500'}>FAQs</span> and Developer
             Docs
           </h2>
           <p className={'text-center text-xl text-balance pb-4 pt-2'}>
@@ -54,7 +59,7 @@ const Home = async () => {
           </p>
           <button
             className={
-              'bg-cyan-600 text-white self-center px-12 py-3 text-lg rounded-lg hover:bg-cyan-500 transition-colors'
+              'bg-blue-600 text-white self-center px-12 py-3 text-lg rounded-lg hover:bg-blue-500 transition-colors'
             }
           >
             Action here
@@ -110,33 +115,129 @@ const Home = async () => {
               <h3 className={'text-2xl font-medium pt-12 pb-2 text-center'}>
                 For Everyone
               </h3>
-              <div className={'p-4 shadow-xl rounded-lg bg-white'}>
-                <h4>Something</h4>
+              <div
+                className={
+                  'p-4 flex flex-col gap-2 text-lg font-light rounded-lg bg-white'
+                }
+              >
+                <div className={'p-2 bg-blue-50 rounded-xl self-start'}>
+                  <PencilIcon className={'text-blue-500'} />
+                </div>
+                <p>
+                  Easily add, edit, preview and publish content such as FAQ and
+                  Help pages to your site without the need to get into the code.
+                </p>
               </div>
-
-              <div className={'p-4 shadow-xl rounded-lg bg-white'}>
-                <h4>Something</h4>
+              <div
+                className={
+                  'p-4 flex flex-col gap-2 text-lg font-light rounded-lg bg-white'
+                }
+              >
+                <div className={'p-2 bg-blue-50 rounded-xl self-start'}>
+                  <NotionIcon className={'text-blue-500'} />
+                </div>
+                <p>
+                  Stay working in your core tools like Notion, without needing
+                  to explore expensive content management systems.
+                </p>
               </div>
-              <div className={'p-4 shadow-xl rounded-lg bg-white'}>
-                <h4>Something</h4>
+              <div
+                className={
+                  'p-4 flex flex-col gap-2 text-lg font-light rounded-lg bg-white'
+                }
+              >
+                <div className={'p-2 bg-blue-50 rounded-xl self-start'}>
+                  <MessageCircleMoreIcon className={'text-blue-500'} />
+                </div>
+                <p>
+                  {
+                    "Take advantage of the collaboration tools in Notion, and keep your content alongside the rest of your team's docs"
+                  }
+                </p>
               </div>
             </div>
             <div className={'w-1/2 flex flex-col gap-4'}>
               <h3 className={'text-2xl font-medium pt-12 pb-2 text-center'}>
                 For Developers
               </h3>
-              <div className={'p-4 shadow-xl rounded-lg bg-white'}>
-                <h4>Something</h4>
+              <div
+                className={
+                  'p-4 flex flex-col gap-2 text-lg font-light rounded-lg bg-white'
+                }
+              >
+                <div className={'p-2 bg-blue-50 rounded-xl self-start'}>
+                  <FileJson2Icon className={'text-blue-500'} />
+                </div>
+                <p>
+                  {`Notion's structured content and block system makes it easy to translate content into code`}
+                </p>
               </div>
-
-              <div className={'p-4 shadow-xl rounded-lg bg-white'}>
-                <h4>Something</h4>
+              <div
+                className={
+                  'p-4 flex flex-col gap-2 text-lg font-light rounded-lg bg-white'
+                }
+              >
+                <div className={'p-2 bg-blue-50 rounded-xl self-start'}>
+                  <FileJson2Icon className={'text-blue-500'} />
+                </div>
+                <p>
+                  Use the simple REST API to pull Notion content into any
+                  application, or take advantage of the TypeScript code client
+                  for end-to-end type safety
+                </p>
               </div>
-              <div className={'p-4 shadow-xl rounded-lg bg-white'}>
-                <h4>Something</h4>
+              <div
+                className={
+                  'p-4 flex flex-col gap-2 text-lg font-light rounded-lg bg-white'
+                }
+              >
+                <div className={'p-2 bg-blue-50 rounded-xl self-start'}>
+                  <BlocksIcon className={'text-blue-500'} />
+                </div>
+                <p>
+                  Use our provided rendering framework to quickly render Notion
+                  blocks in your preferred frontend framework
+                </p>
               </div>
             </div>
           </div>
+          <div
+            className={'flex flex-col items-center gap-4 justify-center py-16'}
+          >
+            <button
+              className={
+                'bg-blue-600 flex gap-1 items-center text-white text-xl px-12 py-3 font-medium rounded-lg'
+              }
+            >
+              Get started
+              <ArrowRightIcon />
+            </button>
+            <button
+              className={
+                'border border-blue-600 text-lg text-blue-600 font-medium px-8 py-2 rounded-lg'
+              }
+            >
+              Read the docs
+            </button>
+          </div>
+        </div>
+        {/* Why did we design this? */}
+        <div
+          className={'w-full max-w-[800px] flex flex-col mx-auto pt-24 px-2'}
+        >
+          <h2 className={'text-center text-4xl font-bold'}>
+            Why did we design this?
+          </h2>
+          <p className={'text-center text-xl font-light py-8'}>
+            {
+              'Planning our previous start up’s FAQs, Blog posts and landing page content was all done in Notion, which we then would translate into code. We’d often want to iterate on this content, which was an annoying process in the code and also restricted non-technical team members from being able to contribute.'
+            }
+            <br />
+            <br />
+            {
+              'Soooo we ended up integrating our Notion content databases into our site through building a Notion MUI and tailwind code translator. But this took time, features kept being added to the list and Notion limitations needed to be overcome, so we’ve decided to create BlockFlow as an out of the box solution to make your lives easier!'
+            }
+          </p>
         </div>
       </div>
     </main>

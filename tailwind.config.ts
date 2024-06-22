@@ -9,10 +9,20 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      colors: {
+        blue: {
+          '50': '#eef9ff',
+          '100': '#daf2ff',
+          '200': '#bde9ff',
+          '300': '#8fdcff',
+          '400': '#5bc6ff',
+          '500': '#34a9fd',
+          '600': '#1e8cf2',
+          '700': '#1674df',
+          '800': '#195db4',
+          '900': '#1a508e',
+          '950': '#153156',
+        },
       },
     },
   },

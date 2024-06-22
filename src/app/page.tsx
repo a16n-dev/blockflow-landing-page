@@ -4,10 +4,10 @@ import { NotionRichText } from '@blockflow/notionTypes';
 import {
   ArrowRightIcon,
   BlocksIcon,
-  EditIcon,
   FileJson2Icon,
   MessageCircleMoreIcon,
   PencilIcon,
+  WebhookIcon,
 } from 'lucide-react';
 import NotionIcon from '@/components/common/NotionIcon/NotionIcon';
 
@@ -169,7 +169,7 @@ const Home = async () => {
                   <FileJson2Icon className={'text-blue-500'} />
                 </div>
                 <p>
-                  {`Notion's structured content and block system makes it easy to translate content into code`}
+                  {`The easiest way to work with Notion data as JSON content, to power any application content`}
                 </p>
               </div>
               <div
@@ -178,7 +178,7 @@ const Home = async () => {
                 }
               >
                 <div className={'p-2 bg-blue-50 rounded-xl self-start'}>
-                  <FileJson2Icon className={'text-blue-500'} />
+                  <WebhookIcon className={'text-blue-500'} />
                 </div>
                 <p>
                   Use the simple REST API to pull Notion content into any

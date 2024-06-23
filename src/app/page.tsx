@@ -10,6 +10,7 @@ import {
   WebhookIcon,
 } from 'lucide-react';
 import NotionIcon from '@/components/common/NotionIcon/NotionIcon';
+import Image from 'next/image';
 
 interface landingPageProperties {
   name: NotionRichText;
@@ -29,7 +30,7 @@ const Home = async () => {
     <main className='flex flex-col min-h-screen bg-gray-50'>
       <div className=' py-32 flex flex-col'>
         <div className={'flex px-4 pb-32 w-full max-w-[1080px] mx-auto'}>
-          <div className={'w-1/2'}>
+          <div className={'w-3/5'}>
             <Logo width={108} />
             <h1 className={'text-6xl font-medium pt-6 pb-2'}>BlockFlow</h1>
             <p className={'text-xl '}>
@@ -38,8 +39,13 @@ const Home = async () => {
               }
             </p>
           </div>
-          <div className={'w-1/2'}>
-            <div className={'h-[300px] bg-gray-300 rounded-xl'}></div>
+          <div className={'w-2/5'}>
+            <Image
+              src={'/heroImg.png'}
+              width={1321}
+              height={1349}
+              alt={'Hero Image'}
+            />
           </div>
         </div>
         {/* Core Action Section */}

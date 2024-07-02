@@ -2,6 +2,7 @@ import { APP_NAME } from '@/utils/constants';
 import BackgroundImage from './background.png';
 import Image from 'next/image';
 import style from './MotivationSection.module.css';
+import { LeafIcon } from 'lucide-react';
 
 const MotivationSection = () => {
   return (
@@ -21,7 +22,13 @@ const MotivationSection = () => {
                 'absolute inset-0 flex items-center justify-center flex-col'
               }
             >
-              <div className={'w-24 h-24 bg-white rounded-3xl shadow-lg'}></div>
+              <div
+                className={
+                  'flex items-center justify-center w-24 h-24 bg-white rounded-3xl shadow-lg text-theme-main'
+                }
+              >
+                <LeafIcon size={48} />
+              </div>
             </div>
           </div>
         </div>

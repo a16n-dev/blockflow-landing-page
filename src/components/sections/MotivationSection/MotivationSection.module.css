@@ -1,5 +1,5 @@
 .card {
-    background: linear-gradient(0deg, var(--theme-bg-color) 0%, transparent 50%), url("/bg-grid-04.svg"), var(--theme-surface-color);
+    background: linear-gradient(0deg, var(--theme-bg-color) 0%, transparent 50%), var(--theme-bg-texture), var(--theme-surface-color);
 
 }
 

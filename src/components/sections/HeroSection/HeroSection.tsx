@@ -2,15 +2,16 @@ const HeroSection = () => {
   return (
     <section
       className={
-        'pt-24 pb-8 flex flex-col items-center max-w-[900px] w-full mx-auto'
+        'pt-24 pb-8 flex flex-col items-center max-w-[932px] px-8 w-full mx-auto'
       }
     >
-      <div className={'max-w-[650px] mb-14'}>
+      <div className={'max-w-[800px] mb-14'}>
         <h1 className={'text-6xl text-center font-bold text-theme-text mb-4'}>
-          This is the page title
+          Your Digital Bullet Journal
         </h1>
         <p className={'text-2xl text-theme-text text-center'}>
-          A unique combination of stylistic freedom and functionality
+          Get your thoughts down, customize, and organize your life. <br /> All
+          in one place.
         </p>
       </div>
       {/* Hero image/svg goes here */}

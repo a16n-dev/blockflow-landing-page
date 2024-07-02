@@ -48,11 +48,11 @@ const UseCaseSection = () => {
           'font-theme-display text-theme-text text-4xl font-bold text-center'
         }
       >
-        Your Digital Bullet Journal
+        Create All Kinds of Entries
       </h2>
-      <p className={'text-theme-text font-theme text-lg text-center mt-1'}>
-        A simple, but powerful way to organize your life in one place
-      </p>
+      {/*<p className={'text-theme-text font-theme text-lg text-center mt-1'}>*/}
+      {/*  A simple, but powerful way to organize your life in one place*/}
+      {/*</p>*/}
       <div className={'grid gap-8 grid-cols-1 md:grid-cols-2 py-8'}>
         <div
           className={`${styles.card} group p-4 pb-0 flex flex-col rounded-xl hover:shadow-xm`}
@@ -85,7 +85,7 @@ const UseCaseSection = () => {
           </h3>
           <p className={'text-theme-text font-theme opacity-75 pb-16 grow'}>
             {
-              'All your tasks in one place, plus reminders help you stay on top of your life'
+              'Create, store and categorize tasks. Use reminders to help you stay on top of your life'
             }
           </p>
           <div className={'self-end px-4'}>

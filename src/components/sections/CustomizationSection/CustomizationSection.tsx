@@ -101,7 +101,7 @@ const CustomizationSection = () => {
             'font-theme-display text-theme-text text-4xl font-bold text-center'
           }
         >
-          Maximum Customization
+          {`Style how you'd Like`}
         </h2>
         <p className={'text-theme-text text-lg text-center mt-1 font-theme'}>
           Letting you decide what your journals look like, while never

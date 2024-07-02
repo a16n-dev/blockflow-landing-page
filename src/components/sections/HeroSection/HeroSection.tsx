@@ -1,3 +1,5 @@
+import { APP_NAME } from '@/utils/constants';
+
 const HeroSection = () => {
   return (
     <section
@@ -11,7 +13,7 @@ const HeroSection = () => {
             'text-6xl font-theme-display text-center font-bold text-theme-text mb-4'
           }
         >
-          Your Digital Bullet Journal
+          {APP_NAME}
         </h1>
         <p className={'font-theme text-2xl text-theme-text text-center'}>
           Get your thoughts down, customize, and organize your life. <br /> All

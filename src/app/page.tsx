@@ -8,6 +8,7 @@ import JoinBetaSection from '@/components/sections/JoinBetaSection/JoinBetaSecti
 import UseCaseSection from '@/components/sections/UseCaseSection/UseCaseSection';
 import FeaturesSection from '@/components/sections/FeaturesSection/FeaturesSection';
 import CustomizationSection from '@/components/sections/CustomizationSection/CustomizationSection';
+import MotivationSection from '@/components/sections/MotivationSection/MotivationSection';
 
 export async function generateMetadata() {
   return {
@@ -24,11 +25,12 @@ const Home = async () => {
         ...tokensToStyles(defaultTokens),
       }}
     >
-      <main className='flex flex-col min-h-screen bg-gray-50'>
+      <main className='flex flex-col min-h-screen'>
         <HeroSection />
         <JoinBetaSection />
         <UseCaseSection />
         <CustomizationSection />
+        <MotivationSection />
         <FeaturesSection />
       </main>
     </div>

@@ -12,11 +12,15 @@ const FeaturesSection = () => {
   return (
     <section style={{ background: 'url("/bg-dot-04.svg")' }}>
       <div className={'bg-gradient-to-b from-theme-bg h-8'} />
-      <div className={'flex flex-col max-w-[900px] w-full mx-auto'}>
+      <div className={'flex flex-col max-w-[932px] px-8 w-full mx-auto'}>
         <h2 className={'text-theme-text text-4xl font-bold text-center'}>
           And more...
         </h2>
-        <div className={'grid grid-cols-3 gap-8 pt-16'}>
+        <div
+          className={
+            'grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 pt-16'
+          }
+        >
           <div className={'flex flex-col'}>
             <div className={'flex gap-2 items-center'}>
               <SmartphoneIcon className={'text-theme-main'} />

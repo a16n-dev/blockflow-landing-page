@@ -8,12 +8,14 @@ const config: Config = {
     './src/utils/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    colors: {
-      'theme-main': 'var(--theme-main-color)',
-      'theme-main-bg': 'var(--theme-main-color-bg)',
-      'theme-bg': 'var(--theme-bg-color)',
-      'theme-surface': 'var(--theme-surface-color)',
-      'theme-text': 'var(--theme-text-color)',
+    extend: {
+      colors: {
+        'theme-main': 'var(--theme-main-color)',
+        'theme-main-bg': 'var(--theme-main-color-bg)',
+        'theme-bg': 'var(--theme-bg-color)',
+        'theme-surface': 'var(--theme-surface-color)',
+        'theme-text': 'var(--theme-text-color)',
+      },
     },
   },
   plugins: [],

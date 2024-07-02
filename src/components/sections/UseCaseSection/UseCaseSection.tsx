@@ -12,7 +12,7 @@ import CalendarGraphic from '@/components/sections/UseCaseSection/CalendarGraphi
 
 const UseCaseSection = () => {
   return (
-    <section className={'max-w-[900px] my-12 mx-auto w-full'}>
+    <section className={'max-w-[932px] my-12 mx-auto w-full px-8'}>
       <div className={'flex justify-center mb-4'}>
         <div
           className={
@@ -49,7 +49,7 @@ const UseCaseSection = () => {
       <p className={'text-theme-text text-lg text-center mt-1'}>
         A simple, but powerful way to organize your life in one place
       </p>
-      <div className={'grid gap-8 grid-cols-2 py-8'}>
+      <div className={'grid gap-8 grid-cols-1 md:grid-cols-2 py-8'}>
         <div
           className={`${styles.card} group p-4 pb-0 flex flex-col rounded-xl hover:shadow-xm`}
         >

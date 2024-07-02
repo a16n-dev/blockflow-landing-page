@@ -16,6 +16,7 @@ import {
   SparklesIcon,
   SquareIcon,
 } from 'lucide-react';
+import CustomizationInteractiveSection from '@/components/sections/CustomizationSection/CustomizationInteractiveSection';
 
 function shuffle(arr: any[]) {
   const array = [...arr];
@@ -90,11 +91,11 @@ const FEATURES: { icon: LucideIcon; title: string }[] = [
 
 const CustomizationSection = () => {
   return (
-    <section style={{ background: 'url("/bg-grid-04.svg")' }}>
+    <section
+      style={{ background: 'var(--theme-bg-texture), rgba(0,0,0, 0.01)' }}
+    >
       <div className={'bg-gradient-to-b from-theme-bg h-8'} />
-      <div
-        className={'flex flex-col max-w-[900px] w-full mx-auto min-h-[200px]'}
-      >
+      <div className={'flex flex-col max-w-[932px] px-8 w-full mx-auto'}>
         <h2 className={'text-theme-text text-4xl font-bold text-center'}>
           Maximum Customization
         </h2>
@@ -103,10 +104,14 @@ const CustomizationSection = () => {
           sacrificing simplicity
         </p>
       </div>
+      <div className={'flex flex-col items-center w-full'}>
+        <CustomizationInteractiveSection />
+      </div>
+
       <h3 className={'text-center text-xl font-bold text-theme-text mt-4'}>
         Your creativity is the limit...
       </h3>
-      <Marquee speed={20} className={'pt-4'}>
+      <Marquee autoFill speed={20} className={'pt-4'}>
         {shuffle(FEATURES).map(({ icon: Icon, title }) => (
           <div
             key={title}
@@ -119,7 +124,7 @@ const CustomizationSection = () => {
           </div>
         ))}
       </Marquee>
-      <Marquee speed={20} direction={'right'} className={'pb-4'}>
+      <Marquee autoFill speed={20} direction={'right'} className={'pb-4'}>
         {shuffle(FEATURES).map(({ icon: Icon, title }) => (
           <div
             key={title}

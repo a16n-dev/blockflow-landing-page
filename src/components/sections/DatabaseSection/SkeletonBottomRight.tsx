@@ -1,6 +1,6 @@
 import { SVGProps } from 'react';
 
-const SkeletonBottomRight = (props: SVGProps<SVGElement>) => {
+const SkeletonBottomRight = (props: SVGProps<any>) => {
   return (
     <svg
       viewBox='0 0 237 162'

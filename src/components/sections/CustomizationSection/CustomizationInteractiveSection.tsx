@@ -91,11 +91,11 @@ const CustomizationInteractiveSection = () => {
           <div className={'grid grid-cols-2 -mt-2'}>
             <CardConstructionGraphic />
             <div
-              className={
-                'bg-theme-main text-theme-bg m-2 mb-3 rounded-xl p-4 text-lg font-bold'
-              }
+              className={'bg-theme-main text-theme-bg m-2 mb-3 rounded-xl p-4'}
             >
-              <p>Task List</p>
+              <p className={'text-lg font-bold font-theme-display'}>
+                Task List
+              </p>
             </div>
           </div>
         </div>

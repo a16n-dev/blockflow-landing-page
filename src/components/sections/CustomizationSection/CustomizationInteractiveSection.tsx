@@ -7,6 +7,7 @@ import TryItOutText from '@/components/sections/CustomizationSection/TryItOutTex
 import { useEffect, useState } from 'react';
 import { LandingPageThemeTokens, setTheme } from '@/utils/themeHelpers';
 import { Grid3x3Icon, GripIcon, SquareIcon } from 'lucide-react';
+import Color from 'color';
 
 enum themeColor {
   green = 'green',
@@ -21,7 +22,7 @@ interface ThemeState {
   bgStyle: 'grid' | 'dot' | 'blank';
   headingFont: string;
   paragraphFont: string;
-  colorScheme: themeColor;
+  colorScheme: themeColor | string;
 }
 
 const mapStateToTheme = (
@@ -33,8 +34,12 @@ const mapStateToTheme = (
       : state.bgStyle === 'dot'
         ? 'url("/bg-dot-04.svg")'
         : 'url("/bg-none.svg")',
-  mainColor: mapColor[state.colorScheme][0],
-  mainColorBg: mapColor[state.colorScheme][1],
+  mainColor: state.colorScheme.startsWith('#')
+    ? state.colorScheme
+    : mapColor[state.colorScheme][0],
+  mainColorBg: state.colorScheme.startsWith('#')
+    ? Color(state.colorScheme).lighten(1).hex()
+    : mapColor[state.colorScheme][1],
 });
 
 const mapColor: Record<themeColor, [string, string]> = {
@@ -120,7 +125,7 @@ const CustomizationInteractiveSection = () => {
             ))}
           </div>
           <p className={'font-bold text-gray-800 text-sm mt-2'}>Color Scheme</p>
-          <div className={`flex gap-2 rounded-lg my-2`}>
+          <div className={`flex gap-1 rounded-lg my-2`}>
             {Object.values(themeColor).map((v) => (
               <button
                 className={`w-6 h-6 rounded-xl border-2 border-white ${state.colorScheme === v ? 'rounded-md border-theme-main' : ''}`}
@@ -131,6 +136,20 @@ const CustomizationInteractiveSection = () => {
                 }
               />
             ))}
+            <div
+              className={
+                'w-6 h-6 bg-gray-300 rounded-xl flex items-center justify-center'
+              }
+            >
+              <input
+                onChange={(e) =>
+                  setState((s) => ({ ...s, colorScheme: e.target.value }))
+                }
+                defaultValue={'#ffffff'}
+                type={'color'}
+                className={'w-4 h-4 p-0 m-0 rounded-xl'}
+              />
+            </div>
           </div>
         </div>
       </div>

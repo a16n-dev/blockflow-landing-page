@@ -1,13 +1,14 @@
-const SkeletonTopLeft = () => {
+import { SVGProps } from 'react';
+
+const SkeletonTopLeft = (props: SVGProps<SVGElement>) => {
   return (
     <svg
-      width='648'
-      height='32'
       viewBox='0 0 648 32'
       fill='none'
       xmlns='http://www.w3.org/2000/svg'
+      {...props}
     >
-      <rect width='302' height='32' rx='16' fill='#D9D9D9' />
+      <rect width='302' height='32' rx='16' fill='currentColor' />
     </svg>
   );
 };

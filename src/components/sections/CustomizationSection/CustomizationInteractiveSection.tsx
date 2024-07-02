@@ -42,7 +42,7 @@ const mapStateToTheme = (
     : mapColor[state.colorScheme][1],
 });
 
-const mapColor: Record<themeColor, [string, string]> = {
+const mapColor: Record<string, [string, string]> = {
   green: ['#98C65B', '#E8F3D9'],
   teal: ['#5fbb8b', '#e6f8f1'],
   blue: ['#3f6ff1', '#e6e9f8'],

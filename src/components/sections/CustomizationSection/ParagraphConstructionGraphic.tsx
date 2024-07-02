@@ -30,10 +30,10 @@ const ParagraphConstructionGraphic = (props: SVGProps<any>) => {
           y2='109'
           gradientUnits='userSpaceOnUse'
         >
-          <stop stop-opacity='0' />
+          <stop stopOpacity='0' />
           <stop offset='0.0568757' />
           <stop offset='0.906593' />
-          <stop offset='1' stop-opacity='0' />
+          <stop offset='1' stopOpacity='0' />
         </linearGradient>
         <linearGradient
           id='paint1_linear_434_511'
@@ -43,10 +43,10 @@ const ParagraphConstructionGraphic = (props: SVGProps<any>) => {
           y2='7.50004'
           gradientUnits='userSpaceOnUse'
         >
-          <stop stop-opacity='0' />
+          <stop stopOpacity='0' />
           <stop offset='0.00983942' />
           <stop offset='0.875' />
-          <stop offset='1' stop-opacity='0' />
+          <stop offset='1' stopOpacity='0' />
         </linearGradient>
         <linearGradient
           id='paint2_linear_434_511'
@@ -56,10 +56,10 @@ const ParagraphConstructionGraphic = (props: SVGProps<any>) => {
           y2='95.5001'
           gradientUnits='userSpaceOnUse'
         >
-          <stop stop-opacity='0' />
+          <stop stopOpacity='0' />
           <stop offset='0.0117351' />
           <stop offset='0.875' />
-          <stop offset='1' stop-opacity='0' />
+          <stop offset='1' stopOpacity='0' />
         </linearGradient>
       </defs>
     </svg>

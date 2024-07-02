@@ -7,7 +7,7 @@ const CardConstructionGraphic = () => {
       fill='none'
       xmlns='http://www.w3.org/2000/svg'
     >
-      <g clip-path='url(#clip0_434_515)'>
+      <g clipPath='url(#clip0_434_515)'>
         <path
           opacity='0.2'
           d='M6 245L360 245'
@@ -20,7 +20,7 @@ const CardConstructionGraphic = () => {
           height='237'
           rx='16'
           fill='url(#paint1_linear_434_515)'
-          fill-opacity='0.04'
+          fillOpacity='0.04'
         />
         <rect
           x='16.5'
@@ -29,9 +29,9 @@ const CardConstructionGraphic = () => {
           height='236'
           rx='15.5'
           stroke='#848484'
-          stroke-opacity='0.69'
-          stroke-linecap='round'
-          stroke-dasharray='4 4'
+          strokeOpacity='0.69'
+          strokeLinecap='round'
+          strokeDasharray='4 4'
         />
         <path
           opacity='0.2'
@@ -58,10 +58,10 @@ const CardConstructionGraphic = () => {
           y2='244.5'
           gradientUnits='userSpaceOnUse'
         >
-          <stop stop-opacity='0' />
+          <stop stopOpacity='0' />
           <stop offset='0.0117351' />
           <stop offset='0.983087' />
-          <stop offset='1' stop-opacity='0' />
+          <stop offset='1' stopOpacity='0' />
         </linearGradient>
         <linearGradient
           id='paint1_linear_434_515'
@@ -71,7 +71,7 @@ const CardConstructionGraphic = () => {
           y2='230.5'
           gradientUnits='userSpaceOnUse'
         >
-          <stop offset='0.237184' stop-opacity='0' />
+          <stop offset='0.237184' stopOpacity='0' />
           <stop offset='0.679457' />
         </linearGradient>
         <linearGradient
@@ -82,10 +82,10 @@ const CardConstructionGraphic = () => {
           y2='259'
           gradientUnits='userSpaceOnUse'
         >
-          <stop stop-opacity='0' />
+          <stop stopOpacity='0' />
           <stop offset='0.0132743' />
           <stop offset='0.972384' />
-          <stop offset='1' stop-opacity='0' />
+          <stop offset='1' stopOpacity='0' />
         </linearGradient>
         <linearGradient
           id='paint3_linear_434_515'
@@ -95,10 +95,10 @@ const CardConstructionGraphic = () => {
           y2='259'
           gradientUnits='userSpaceOnUse'
         >
-          <stop stop-opacity='0' />
+          <stop stopOpacity='0' />
           <stop offset='0.0132743' />
           <stop offset='0.972384' />
-          <stop offset='1' stop-opacity='0' />
+          <stop offset='1' stopOpacity='0' />
         </linearGradient>
         <linearGradient
           id='paint4_linear_434_515'
@@ -108,10 +108,10 @@ const CardConstructionGraphic = () => {
           y2='7.50003'
           gradientUnits='userSpaceOnUse'
         >
-          <stop stop-opacity='0' />
+          <stop stopOpacity='0' />
           <stop offset='0.0117351' />
           <stop offset='0.983087' />
-          <stop offset='1' stop-opacity='0' />
+          <stop offset='1' stopOpacity='0' />
         </linearGradient>
         <clipPath id='clip0_434_515'>
           <rect width='361' height='256' fill='white' />

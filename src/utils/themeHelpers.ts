@@ -39,6 +39,6 @@ export const setTheme = (tokens: Partial<LandingPageThemeTokens>) => {
   const styles = tokensToStyles({ ...defaultTokens, ...tokens });
 
   for (const style of Object.keys(styles)) {
-    elem.style.setProperty(style, styles[style]);
+    elem?.style.setProperty(style, (styles as any)[style]);
   }
 };

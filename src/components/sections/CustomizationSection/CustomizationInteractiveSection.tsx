@@ -6,7 +6,7 @@ import CardConstructionGraphic from '@/components/sections/CustomizationSection/
 import TryItOutText from '@/components/sections/CustomizationSection/TryItOutText';
 import { useEffect, useState } from 'react';
 import { LandingPageThemeTokens, setTheme } from '@/utils/themeHelpers';
-import { Grid3x3, Grid3x3Icon, GripIcon, SquareIcon } from 'lucide-react';
+import { Grid3x3Icon, GripIcon, SquareIcon } from 'lucide-react';
 
 enum themeColor {
   green = 'green',

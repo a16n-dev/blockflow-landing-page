@@ -8,22 +8,12 @@ const config: Config = {
     './src/utils/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    extend: {
-      colors: {
-        blue: {
-          '50': '#eef9ff',
-          '100': '#daf2ff',
-          '200': '#bde9ff',
-          '300': '#8fdcff',
-          '400': '#5bc6ff',
-          '500': '#34a9fd',
-          '600': '#1e8cf2',
-          '700': '#1674df',
-          '800': '#195db4',
-          '900': '#1a508e',
-          '950': '#153156',
-        },
-      },
+    colors: {
+      'theme-main': 'var(--theme-main-color)',
+      'theme-main-bg': 'var(--theme-main-color-bg)',
+      'theme-bg': 'var(--theme-bg-color)',
+      'theme-surface': 'var(--theme-surface-color)',
+      'theme-text': 'var(--theme-text-color)',
     },
   },
   plugins: [],

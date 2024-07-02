@@ -1,0 +1,9 @@
+.card {
+    background: linear-gradient(150deg, var(--theme-surface-color) 0%, transparent 88%), url("/bg-grid-04.svg"), var(--theme-surface-color);
+}
+
+.card:hover {
+    background: linear-gradient(150deg, var(--theme-main-color-bg) 0%, transparent 88%), url("/bg-grid-04.svg"), var(--theme-main-color-bg);
+
+}
+

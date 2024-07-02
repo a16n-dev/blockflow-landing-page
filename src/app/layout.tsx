@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
 import { Rubik } from 'next/font/google';
+import { Open_Sans } from 'next/font/google';
 import './globals.css';
 import Footer from '@/components/layout/Footer/Footer';
 
-const rubik = Rubik({ subsets: ['latin'] });
+const openSans = Open_Sans({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -17,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={rubik.className}>
+      <body className={openSans.className}>
         {children}
         <Footer />
       </body>

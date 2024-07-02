@@ -36,7 +36,7 @@ const FeaturesSection = () => {
                 Responsive
               </h3>
             </div>
-            <p className={'text-theme-text'}>
+            <p className={'text-theme-text font-theme'}>
               Full editing and customization control across your laptop, phone
               and tablet.
             </p>
@@ -52,7 +52,7 @@ const FeaturesSection = () => {
                 Data Protection
               </h3>
             </div>
-            <p className={'text-theme-text'}>
+            <p className={'text-theme-text font-theme'}>
               We take security seriously, and you retain full control over your
               data.
             </p>
@@ -68,7 +68,7 @@ const FeaturesSection = () => {
                 Customization Presets
               </h3>
             </div>
-            <p className={'text-theme-text'}>
+            <p className={'text-theme-text font-theme'}>
               Get started in minutes with our growing library of themes and
               templates
             </p>
@@ -84,13 +84,13 @@ const FeaturesSection = () => {
                 Offline Mode
               </h3>
             </div>
-            <p className={'text-theme-text'}>
+            <p className={'text-theme-text font-theme'}>
               Take your journals wherever you go, knowing you’ll always have
               full access to your data.
             </p>
             <div
               className={
-                'bg-theme-main-bg text-theme-main px-2 py-1 text-xs rounded-md font-semibold self-start mt-1'
+                'bg-theme-main-bg font-theme text-theme-main px-2 py-1 text-xs rounded-md font-semibold self-start mt-1'
               }
             >
               Coming soon
@@ -107,13 +107,13 @@ const FeaturesSection = () => {
                 Collaboration
               </h3>
             </div>
-            <p className={'text-theme-text'}>
+            <p className={'text-theme-text font-theme'}>
               We know the best ideas come from collaboration - share a journal
               with your friends or your partner.
             </p>
             <div
               className={
-                'bg-theme-main-bg text-theme-main px-2 py-1 text-xs rounded-md font-semibold self-start mt-1'
+                'bg-theme-main-bg font-theme text-theme-main px-2 py-1 text-xs rounded-md font-semibold self-start mt-1'
               }
             >
               Coming soon
@@ -130,13 +130,13 @@ const FeaturesSection = () => {
                 Easy Import
               </h3>
             </div>
-            <p className={'text-theme-text'}>
+            <p className={'text-theme-text font-theme'}>
               Easily import all your existing data from Notion and other apps in
               just a few clicks.
             </p>
             <div
               className={
-                'bg-theme-main-bg text-theme-main px-2 py-1 text-xs rounded-md font-semibold self-start mt-1'
+                'bg-theme-main-bg  font-theme text-theme-main px-2 py-1 text-xs rounded-md font-semibold self-start mt-1'
               }
             >
               Coming soon

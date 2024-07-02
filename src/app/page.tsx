@@ -9,6 +9,7 @@ import UseCaseSection from '@/components/sections/UseCaseSection/UseCaseSection'
 import FeaturesSection from '@/components/sections/FeaturesSection/FeaturesSection';
 import CustomizationSection from '@/components/sections/CustomizationSection/CustomizationSection';
 import MotivationSection from '@/components/sections/MotivationSection/MotivationSection';
+import DatabaseSection from '@/components/sections/DatabaseSection/DatabaseSection';
 
 export async function generateMetadata() {
   return {
@@ -30,6 +31,7 @@ const Home = async () => {
         <JoinBetaSection />
         <UseCaseSection />
         <CustomizationSection />
+        <DatabaseSection />
         <MotivationSection />
         <FeaturesSection />
       </main>

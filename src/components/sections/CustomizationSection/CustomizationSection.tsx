@@ -103,7 +103,7 @@ const CustomizationSection = () => {
         >
           Maximum Customization
         </h2>
-        <p className={'text-theme-text text-lg text-center mt-1'}>
+        <p className={'text-theme-text text-lg text-center mt-1 font-theme'}>
           Letting you decide what your journals look like, while never
           sacrificing simplicity
         </p>
@@ -128,7 +128,7 @@ const CustomizationSection = () => {
             }
           >
             <Icon size={24} />
-            <h3 className={' font-bold text-sm'}>{title}</h3>
+            <h3 className={'font-bold text-sm font-theme'}>{title}</h3>
           </div>
         ))}
       </Marquee>
@@ -141,7 +141,7 @@ const CustomizationSection = () => {
             }
           >
             <Icon size={24} />
-            <h3 className={' font-bold text-sm'}>{title}</h3>
+            <h3 className={'font-bold text-sm font-theme'}>{title}</h3>
           </div>
         ))}
       </Marquee>

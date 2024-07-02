@@ -13,7 +13,7 @@ const HeroSection = () => {
         >
           Your Digital Bullet Journal
         </h1>
-        <p className={'text-2xl text-theme-text text-center'}>
+        <p className={'font-theme text-2xl text-theme-text text-center'}>
           Get your thoughts down, customize, and organize your life. <br /> All
           in one place.
         </p>

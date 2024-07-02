@@ -77,7 +77,7 @@ const CustomizationInteractiveSection = () => {
           <div className={'relative'}>
             <ParagraphConstructionGraphic />
             <p
-              className={'absolute inset-0 text-sm py-5 px-6'}
+              className={'font-theme absolute inset-0 text-sm py-5 px-6'}
               style={{
                 maskImage:
                   ' linear-gradient(-35deg, rgb(0 0 0 / 100%) 25%, transparent 70%)',
@@ -100,9 +100,9 @@ const CustomizationInteractiveSection = () => {
           </div>
         </div>
       </div>
-      <div className={'relative flex flex-col pr-20'}>
+      <div className={'relative flex flex-col pr-12'}>
         <TryItOutText
-          className={'self-end relative -right-16 top-2 text-theme-text'}
+          className={'self-end relative -right-8 text-theme-main'}
         />
         <div
           className={
@@ -140,9 +140,12 @@ const CustomizationInteractiveSection = () => {
               />
             ))}
             <div
-              className={
-                'w-6 h-6 bg-gray-300 rounded-xl flex items-center justify-center'
-              }
+              className={'w-6 h-6 rounded-xl flex items-center justify-center'}
+              style={{
+                background: state.colorScheme.startsWith('#')
+                  ? '#d7d7d7'
+                  : 'conic-gradient(from 90deg, violet, indigo,blue, green, yellow, orange, red, violet)',
+              }}
             >
               <input
                 onChange={(e) =>
@@ -150,7 +153,7 @@ const CustomizationInteractiveSection = () => {
                 }
                 defaultValue={'#ffffff'}
                 type={'color'}
-                className={'w-4 h-4 p-0 m-0 rounded-xl'}
+                className={`${state.colorScheme.startsWith('#') ? 'w-6 h-6' : 'w-4 h-4'} cursor-pointer p-0 m-0 rounded-xl`}
               />
             </div>
           </div>
@@ -158,6 +161,11 @@ const CustomizationInteractiveSection = () => {
           <ComboBox
             value={state.headingFont}
             onChange={(v) => setState((s) => ({ ...s, headingFont: v }))}
+          />
+          <p className={'font-bold text-gray-800 text-sm mt-1'}>Body Font</p>
+          <ComboBox
+            value={state.paragraphFont}
+            onChange={(v) => setState((s) => ({ ...s, paragraphFont: v }))}
           />
         </div>
       </div>

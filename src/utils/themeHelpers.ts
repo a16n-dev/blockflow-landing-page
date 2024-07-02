@@ -5,6 +5,9 @@ export enum Fonts {
   'Rubik' = 'Rubik',
   'PlayFair' = 'Playfair Display',
   'FiraMono' = 'Fira Mono',
+  'Poppins' = 'Poppins',
+  'Caveat' = 'Caveat',
+  'Raleway' = 'Raleway',
 }
 
 export interface LandingPageThemeTokens {
@@ -26,6 +29,12 @@ const fontHrefs: Record<Fonts, string> = {
     'https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap',
   [Fonts.FiraMono]:
     'https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&display=swap',
+  [Fonts.Poppins]:
+    'https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap',
+  [Fonts.Caveat]:
+    'https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Fira+Mono:wght@400;500;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap',
+  [Fonts.Raleway]:
+    'https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Fira+Mono:wght@400;500;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap',
 };
 
 export const THEME_PROVIDER_ID = 'landing-page-theme-provider';
@@ -70,6 +79,13 @@ export const setTheme = (tokens: Partial<LandingPageThemeTokens>) => {
   if (combinedTokens.displayFontFamily) {
     const link = document.createElement('link');
     link.href = fontHrefs[combinedTokens.displayFontFamily];
+    link.rel = 'stylesheet';
+    document.head.appendChild(link);
+  }
+
+  if (combinedTokens.textFontFamily) {
+    const link = document.createElement('link');
+    link.href = fontHrefs[combinedTokens.textFontFamily];
     link.rel = 'stylesheet';
     document.head.appendChild(link);
   }

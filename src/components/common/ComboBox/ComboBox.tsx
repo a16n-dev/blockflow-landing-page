@@ -28,7 +28,7 @@ const ComboBox = ({ value, onChange }: ComboBoxProps) => {
           value={value}
           onChange={(e) => onChange(e.target.value as Fonts)}
           className={clsx(
-            'block w-full bg-gray-200 appearance-none rounded-lg border-none bg-white/5 py-1.5 px-3 text-sm',
+            'block w-full bg-gray-200 text-gray-700 appearance-none rounded-lg border-none font-medium mt-1 py-1.5 px-3 text-sm',
             'focus:outline-none data-[focus]:outline-2 data-[focus]:-outline-offset-2 data-[focus]:outline-white/25',
           )}
         >

@@ -13,7 +13,11 @@ const JoinBetaSection = () => {
         >
           Get Beta Access
         </h2>
-        <p className={'mb-4 text-lg text-theme-bg text-center max-w-[600px]'}>
+        <p
+          className={
+            'mb-4 font-theme  text-lg text-theme-bg text-center max-w-[600px]'
+          }
+        >
           {`We’re deeply passionate about making journaling a better digital experience, and are building ${APP_NAME} around your experiences and the features you want!`}
           <br />
           <br />

@@ -39,15 +39,15 @@ const MotivationSection = () => {
             {`Why we made ${APP_NAME}`}
           </h2>
           <p
-            className={'text-theme-text'}
+            className={'text-theme-text font-theme'}
           >{`We love the functionality that Notion has, but it lacks the ability to really personalize the style and design.`}</p>
           <br />
           <p
-            className={'text-theme-text'}
+            className={'text-theme-text font-theme'}
           >{`Apps like Zinnia and Goodnotes gave me the customization we wanted for bullet journaling, but lacked the powerful functionality that Notion’s databases offered.`}</p>
           <br />
           <p
-            className={'text-theme-text'}
+            className={'text-theme-text font-theme'}
           >{`So we created BlockFlow so that you can have the best of both worlds!`}</p>
         </div>
       </div>

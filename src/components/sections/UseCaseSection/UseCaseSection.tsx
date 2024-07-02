@@ -50,7 +50,7 @@ const UseCaseSection = () => {
       >
         Your Digital Bullet Journal
       </h2>
-      <p className={'text-theme-text text-lg text-center mt-1'}>
+      <p className={'text-theme-text font-theme text-lg text-center mt-1'}>
         A simple, but powerful way to organize your life in one place
       </p>
       <div className={'grid gap-8 grid-cols-1 md:grid-cols-2 py-8'}>
@@ -65,7 +65,7 @@ const UseCaseSection = () => {
             <TargetIcon size={32} />
             Habit Tracking
           </h3>
-          <p className={'text-theme-text opacity-75 pb-16 grow'}>
+          <p className={'text-theme-text font-theme opacity-75 pb-16 grow'}>
             {'Track habits and keep yourself accountable to hit your goals'}
           </p>
           <div className={'self-end px-4'}>
@@ -83,7 +83,7 @@ const UseCaseSection = () => {
             <ListTodoIcon size={32} />
             Tasks & Reminders
           </h3>
-          <p className={'text-theme-text opacity-75 pb-16 grow'}>
+          <p className={'text-theme-text font-theme opacity-75 pb-16 grow'}>
             {
               'All your tasks in one place, plus reminders help you stay on top of your life'
             }
@@ -103,7 +103,7 @@ const UseCaseSection = () => {
             <NotebookIcon size={32} />
             Journaling
           </h3>
-          <p className={'text-theme-text opacity-75 pb-16 grow'}>
+          <p className={'text-theme-text font-theme opacity-75 pb-16 grow'}>
             {
               'Keep a daily journal or easily jot down thoughts as inspiration strikes'
             }
@@ -123,7 +123,7 @@ const UseCaseSection = () => {
             <CalendarIcon size={32} />
             Calendar & Schedule
           </h3>
-          <p className={'text-theme-text opacity-75 pb-16 grow'}>
+          <p className={'text-theme-text font-theme opacity-75 pb-16 grow'}>
             {
               'Plan your schedules and events with full customisation, plus sync with your existing calendar!'
             }

@@ -6,7 +6,11 @@ const HeroSection = () => {
       }
     >
       <div className={'max-w-[800px] mb-14'}>
-        <h1 className={'text-6xl text-center font-bold text-theme-text mb-4'}>
+        <h1
+          className={
+            'text-6xl font-theme-display text-center font-bold text-theme-text mb-4'
+          }
+        >
           Your Digital Bullet Journal
         </h1>
         <p className={'text-2xl text-theme-text text-center'}>

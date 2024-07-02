@@ -6,7 +6,11 @@ const JoinBetaSection = () => {
       <div
         className={`${styles.card} p-8 rounded-xl flex flex-col items-center`}
       >
-        <h2 className={'text-theme-bg text-center text-2xl font-bold'}>
+        <h2
+          className={
+            'font-theme-display text-theme-bg text-center text-2xl font-bold'
+          }
+        >
           Get Beta Access
         </h2>
         <p className={'mb-4 text-lg text-theme-bg text-center max-w-[600px]'}>

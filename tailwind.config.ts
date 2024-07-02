@@ -16,6 +16,10 @@ const config: Config = {
         'theme-surface': 'var(--theme-surface-color)',
         'theme-text': 'var(--theme-text-color)',
       },
+      fontFamily: {
+        'theme-display': 'var(--theme-display-font)',
+        theme: 'var(--theme-text-font)',
+      },
     },
   },
   plugins: [],

@@ -33,7 +33,9 @@ const MotivationSection = () => {
           </div>
         </div>
         <div className={'flex flex-col px-4'}>
-          <h2 className={'text-theme-text font-bold text-2xl'}>
+          <h2
+            className={'font-theme-display text-theme-text font-bold text-2xl'}
+          >
             {`Why we made ${APP_NAME}`}
           </h2>
           <p

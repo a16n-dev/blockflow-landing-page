@@ -43,7 +43,11 @@ const UseCaseSection = () => {
           <CalendarIcon size={32} />
         </div>
       </div>
-      <h2 className={'text-theme-text text-4xl font-bold text-center'}>
+      <h2
+        className={
+          'font-theme-display text-theme-text text-4xl font-bold text-center'
+        }
+      >
         Your Digital Bullet Journal
       </h2>
       <p className={'text-theme-text text-lg text-center mt-1'}>
@@ -55,7 +59,7 @@ const UseCaseSection = () => {
         >
           <h3
             className={
-              'font-semibold text-xl text-theme-text flex items-center gap-1 mb-2 group-hover:text-theme-main transition-colors'
+              'font-theme-display font-semibold text-xl text-theme-text flex items-center gap-1 mb-2 group-hover:text-theme-main transition-colors'
             }
           >
             <TargetIcon size={32} />
@@ -73,7 +77,7 @@ const UseCaseSection = () => {
         >
           <h3
             className={
-              'font-semibold text-xl text-theme-text flex items-center gap-1 mb-2 group-hover:text-theme-main transition-colors'
+              'font-theme-display font-semibold text-xl text-theme-text flex items-center gap-1 mb-2 group-hover:text-theme-main transition-colors'
             }
           >
             <ListTodoIcon size={32} />
@@ -93,7 +97,7 @@ const UseCaseSection = () => {
         >
           <h3
             className={
-              'font-semibold text-xl text-theme-text flex items-center gap-1 mb-2 group-hover:text-theme-main transition-colors'
+              'font-theme-display font-semibold text-xl text-theme-text flex items-center gap-1 mb-2 group-hover:text-theme-main transition-colors'
             }
           >
             <NotebookIcon size={32} />
@@ -113,7 +117,7 @@ const UseCaseSection = () => {
         >
           <h3
             className={
-              'font-semibold text-xl text-theme-text flex items-center gap-1 mb-2 group-hover:text-theme-main transition-colors'
+              'font-theme-display font-semibold text-xl text-theme-text flex items-center gap-1 mb-2 group-hover:text-theme-main transition-colors'
             }
           >
             <CalendarIcon size={32} />

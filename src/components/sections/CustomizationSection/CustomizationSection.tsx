@@ -96,7 +96,11 @@ const CustomizationSection = () => {
     >
       <div className={'bg-gradient-to-b from-theme-bg h-8'} />
       <div className={'flex flex-col max-w-[932px] px-8 w-full mx-auto'}>
-        <h2 className={'text-theme-text text-4xl font-bold text-center'}>
+        <h2
+          className={
+            'font-theme-display text-theme-text text-4xl font-bold text-center'
+          }
+        >
           Maximum Customization
         </h2>
         <p className={'text-theme-text text-lg text-center mt-1'}>
@@ -108,7 +112,11 @@ const CustomizationSection = () => {
         <CustomizationInteractiveSection />
       </div>
 
-      <h3 className={'text-center text-xl font-bold text-theme-text mt-4'}>
+      <h3
+        className={
+          'font-theme-display text-center text-xl font-bold text-theme-text mt-4'
+        }
+      >
         Your creativity is the limit...
       </h3>
       <Marquee autoFill speed={20} className={'pt-4'}>

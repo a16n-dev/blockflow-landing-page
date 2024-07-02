@@ -13,7 +13,11 @@ const FeaturesSection = () => {
     <section style={{ background: 'url("/bg-dot-04.svg")' }}>
       <div className={'bg-gradient-to-b from-theme-bg h-8'} />
       <div className={'flex flex-col max-w-[932px] px-8 w-full mx-auto'}>
-        <h2 className={'text-theme-text text-4xl font-bold text-center'}>
+        <h2
+          className={
+            'font-theme-display text-theme-text text-4xl font-bold text-center'
+          }
+        >
           And more...
         </h2>
         <div
@@ -24,7 +28,11 @@ const FeaturesSection = () => {
           <div className={'flex flex-col'}>
             <div className={'flex gap-2 items-center'}>
               <SmartphoneIcon className={'text-theme-main'} />
-              <h3 className={'text-theme-text font-bold text-xl'}>
+              <h3
+                className={
+                  'font-theme-display text-theme-text font-bold text-xl'
+                }
+              >
                 Responsive
               </h3>
             </div>
@@ -36,7 +44,11 @@ const FeaturesSection = () => {
           <div className={'flex flex-col'}>
             <div className={'flex gap-2 items-center'}>
               <BookLockIcon className={'text-theme-main'} />
-              <h3 className={'text-theme-text font-bold text-xl'}>
+              <h3
+                className={
+                  'font-theme-display text-theme-text font-bold text-xl'
+                }
+              >
                 Data Protection
               </h3>
             </div>
@@ -48,7 +60,11 @@ const FeaturesSection = () => {
           <div className={'flex flex-col'}>
             <div className={'flex gap-2 items-center'}>
               <SwatchBookIcon className={'text-theme-main'} />
-              <h3 className={'text-theme-text font-bold text-xl'}>
+              <h3
+                className={
+                  'font-theme-display text-theme-text font-bold text-xl'
+                }
+              >
                 Customization Presets
               </h3>
             </div>
@@ -60,7 +76,11 @@ const FeaturesSection = () => {
           <div className={'flex flex-col'}>
             <div className={'flex gap-2 items-center'}>
               <CloudOffIcon className={'text-theme-main'} />
-              <h3 className={'text-theme-text font-bold text-xl'}>
+              <h3
+                className={
+                  'font-theme-display text-theme-text font-bold text-xl'
+                }
+              >
                 Offline Mode
               </h3>
             </div>
@@ -79,7 +99,11 @@ const FeaturesSection = () => {
           <div className={'flex flex-col'}>
             <div className={'flex gap-2 items-center'}>
               <MessagesSquareIcon className={'text-theme-main'} />
-              <h3 className={'text-theme-text font-bold text-xl'}>
+              <h3
+                className={
+                  'font-theme-display text-theme-text font-bold text-xl'
+                }
+              >
                 Collaboration
               </h3>
             </div>
@@ -98,7 +122,11 @@ const FeaturesSection = () => {
           <div className={'flex flex-col'}>
             <div className={'flex gap-2 items-center'}>
               <ImportIcon className={'text-theme-main'} />
-              <h3 className={'text-theme-text font-bold text-xl'}>
+              <h3
+                className={
+                  'font-theme-display text-theme-text font-bold text-xl'
+                }
+              >
                 Easy Import
               </h3>
             </div>

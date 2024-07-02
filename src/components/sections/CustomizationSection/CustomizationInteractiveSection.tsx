@@ -5,9 +5,10 @@ import ParagraphConstructionGraphic from '@/components/sections/CustomizationSec
 import CardConstructionGraphic from '@/components/sections/CustomizationSection/CardConstructionGraphic';
 import TryItOutText from '@/components/sections/CustomizationSection/TryItOutText';
 import { useEffect, useState } from 'react';
-import { LandingPageThemeTokens, setTheme } from '@/utils/themeHelpers';
+import { Fonts, LandingPageThemeTokens, setTheme } from '@/utils/themeHelpers';
 import { Grid3x3Icon, GripIcon, SquareIcon } from 'lucide-react';
 import Color from 'color';
+import ComboBox from '@/components/common/ComboBox/ComboBox';
 
 enum themeColor {
   green = 'green',
@@ -20,8 +21,8 @@ enum themeColor {
 
 interface ThemeState {
   bgStyle: 'grid' | 'dot' | 'blank';
-  headingFont: string;
-  paragraphFont: string;
+  headingFont: Fonts;
+  paragraphFont: Fonts;
   colorScheme: themeColor | string;
 }
 
@@ -40,6 +41,8 @@ const mapStateToTheme = (
   mainColorBg: state.colorScheme.startsWith('#')
     ? Color(state.colorScheme).lighten(1).hex()
     : mapColor[state.colorScheme][1],
+  displayFontFamily: state.headingFont,
+  textFontFamily: state.paragraphFont,
 });
 
 const mapColor: Record<string, [string, string]> = {
@@ -54,8 +57,8 @@ const mapColor: Record<string, [string, string]> = {
 const CustomizationInteractiveSection = () => {
   const [state, setState] = useState<ThemeState>({
     bgStyle: 'grid',
-    headingFont: 'Inter',
-    paragraphFont: 'Inter',
+    headingFont: Fonts.OpenSans,
+    paragraphFont: Fonts.OpenSans,
     colorScheme: themeColor.blue,
   });
 
@@ -151,6 +154,11 @@ const CustomizationInteractiveSection = () => {
               />
             </div>
           </div>
+          <p className={'font-bold text-gray-800 text-sm'}>Heading Font</p>
+          <ComboBox
+            value={state.headingFont}
+            onChange={(v) => setState((s) => ({ ...s, headingFont: v }))}
+          />
         </div>
       </div>
     </div>

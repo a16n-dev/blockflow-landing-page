@@ -22,8 +22,14 @@ const DatabaseSection = () => {
     { label: 'This is some text!', checked: false },
   ]);
 
-  const [notes, setNotes] = useState<{ title: string; body: string }[]>([
-    { title: 'This is a note', body: 'This is the is the  body of the note' },
+  const [notes, setNotes] = useState<
+    { title: string; body: string; timestamp: string }[]
+  >([
+    {
+      title: 'This is a note',
+      body: 'This is the is the  body of the note',
+      timestamp: '2024-07-01T12:12:12Z',
+    },
     {
       title: 'This is a note',
       body: 'This is the  is the  is the body of the note',

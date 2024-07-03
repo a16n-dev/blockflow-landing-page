@@ -4,6 +4,7 @@ import SkeletonTopRight from '@/components/sections/DatabaseSection/SkeletonTopR
 import SkeletonBottomLeft from '@/components/sections/DatabaseSection/SkeletonBottomLeft';
 import SkeletonBottomRight from '@/components/sections/DatabaseSection/SkeletonBottomRight';
 import {
+  ArrowDown,
   CheckIcon,
   CheckSquare2Icon,
   FileClockIcon,
@@ -62,19 +63,35 @@ const DatabaseSection = () => {
   const { ref: endRef, inView: endInView } = useInView();
 
   return (
-    <section className={'px-8 mx-auto py-16 w-full max-w-[932px]'}>
+    <section
+      className={'px-8 mx-auto flex flex-col py-16 w-full max-w-[932px]'}
+    >
       <h2
         className={
           'font-theme-display text-theme-text text-4xl font-bold text-center'
         }
       >
-        Structure powered by Databases
+        Notion-style Databases
       </h2>
       <p className={'text-theme-text font-theme text-lg text-center mt-1'}>
-        {`Organise and find entries using Notion-style databases`}
+        {`Entries like Tasks and Notes are recorded into your journal database`}
+      </p>
+      <div
+        className={
+          'p-1 bg-theme-main-bg rounded-md self-center my-4 text-theme-main'
+        }
+      >
+        <ArrowDown size={24} />
+      </div>
+      <p
+        className={
+          'font-medium mx-auto text-md max-w-[400px] text-theme-text font-theme text-center'
+        }
+      >
+        {`Display database entries in customized widget views, to keep things front of mind `}
       </p>
       {/* Databases in isolation */}
-      <div className={'overflow-y-hidden mt-12'}>
+      <div className={'overflow-y-hidden mt-4'}>
         <div className={'grid grid-cols-2 mb-16 gap-8 w-full'}>
           <div className={'flex flex-col z-20'}>
             <div

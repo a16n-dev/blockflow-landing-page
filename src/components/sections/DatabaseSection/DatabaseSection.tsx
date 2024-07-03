@@ -19,9 +19,9 @@ type Position = [x: number, y: number];
 
 const DatabaseSection = () => {
   const [todos, setTodos] = useState<{ label: string; checked: boolean }[]>([
-    { label: 'This is some text!', checked: false },
-    { label: 'This is some text!', checked: false },
-    { label: 'This is some text!', checked: false },
+    // { label: 'Schedule dinner with friends', checked: false },
+    // { label: 'Finish writing notes for class', checked: false },
+    // { label: 'Pick up groceries for dinner', checked: false },
   ]);
 
   const [notes, setNotes] = useState<
@@ -44,7 +44,7 @@ const DatabaseSection = () => {
     },
     {
       title: 'This is a note',
-      body: 'This is is the  is the  the body of the noteThis is is the  is the  the body of the noteThis is is the  is the  the body of the noteThis is is the  is the  the body of the note',
+      body: 'This is is the  is the  the body of the noteThe noteThe noteThe noteThe noteThe noteThe noteThe noteThis is is the  is the  the body of the noteThis is is the  is the  the body of the noteThis is is the  is the  the body of the note',
       timestamp: '2024-07-01T12:12:12Z',
     },
     {
@@ -58,7 +58,7 @@ const DatabaseSection = () => {
   const { ref: endRef, inView: endInView } = useInView();
 
   return (
-    <section className={'px-8 mx-auto py-16'}>
+    <section className={'px-8 mx-auto py-16 w-full max-w-[932px]'}>
       <h2
         className={
           'font-theme-display text-theme-text text-4xl font-bold text-center pb-12'
@@ -67,11 +67,11 @@ const DatabaseSection = () => {
         Databases
       </h2>
       {/* Databases in isolation */}
-      <div className={'grid grid-cols-2 mb-16 gap-8'}>
-        <div className={'bg-theme-surface p-2 rounded-lg flex flex-col'}>
+      <div className={'grid grid-cols-2 mb-16 gap-8 w-full'}>
+        <div className={'bg-theme-surface p-2 rounded-lg flex flex-col z-10'}>
           <div
             className={
-              'flex items-center font-bold gap-1 bg-theme-bg self-start py-1 pl-1 pr-4 rounded-lg'
+              'flex items-center font-bold gap-1 bg-theme-bg self-start py-1 pl-1 pr-4 rounded-lg '
             }
           >
             <FileIcon />
@@ -95,13 +95,78 @@ const DatabaseSection = () => {
       </div>
       {/* Databases in spread */}
       <div
-        className={`${styles.card} w-full rounded-xl grid grid-col-1 md:grid-cols-3 p-8 gap-8 text-black/5 aspect-[16/10]`}
+        className={`${styles.card} max-w-[700px] mx-auto w-full rounded-xl grid grid-col-1 md:grid-cols-3 p-8 gap-8 text-black/5 aspect-[16/10]`}
       >
-        <div className={'flex-col gap-4 hidden md:flex col-span-2'}>
-          <SkeletonTopLeft className={'w-full'} />
+        <div className={'flex-col hidden md:flex col-span-2'}>
+          <SkeletonTopLeft className={'w-full mb-4'} />
+          <div className={'h-0 relative flex flex-col items-center'}>
+            <svg
+              width='272'
+              height='181'
+              viewBox='0 0 272 181'
+              fill='none'
+              xmlns='http://www.w3.org/2000/svg'
+              className={'absolute -bottom-4 '}
+            >
+              <path
+                d='M155 2C154.999 91.6494 22 87.8971 22 179'
+                stroke='url(#gradient2)'
+                strokeWidth='8'
+                strokeLinecap='square'
+              />
+
+              <defs>
+                <linearGradient
+                  id='gradient2'
+                  x1='0%'
+                  y1='0%'
+                  x2='0%'
+                  y2='100%'
+                >
+                  <stop
+                    offset='0%'
+                    style={{ stopColor: 'var(--theme-main-color)' }}
+                  >
+                    <animate
+                      id={'start'}
+                      attributeName='offset'
+                      values='0;1'
+                      dur='2s'
+                      repeatCount='indefinite'
+                      begin={'mid.begin+.2s'}
+                    />
+                  </stop>
+                  <stop
+                    offset='0%'
+                    style={{ stopColor: 'var(--theme-main-color-bg)' }}
+                  >
+                    <animate
+                      id={'mid'}
+                      attributeName='offset'
+                      values='0;1'
+                      dur='2s'
+                      repeatCount='indefinite'
+                    />
+                  </stop>
+                  <stop
+                    offset='100%'
+                    style={{ stopColor: 'var(--theme-main-color)' }}
+                  >
+                    {/*<animate*/}
+                    {/*  id={'end'}*/}
+                    {/*  attributeName='offset'*/}
+                    {/*  values='0;1'*/}
+                    {/*  dur='2s'*/}
+                    {/*  repeatCount='indefinite'*/}
+                    {/*/>*/}
+                  </stop>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
           <div
             className={
-              'grow bg-theme-main-bg border-theme-main border-2 max-w-[600px] rounded-lg relative right-4 shadow-xl flex flex-col p-4 text-theme-main'
+              'grow bg-theme-main-bg border-theme-main border-2 max-w-[500px] rounded-lg relative right-4 shadow-xl flex flex-col p-4 text-theme-main'
             }
           >
             <div className={'flex gap-1 items-center pb-4'}>
@@ -119,7 +184,7 @@ const DatabaseSection = () => {
             </div>
             <div
               className={
-                'flex gap-2 overflow-y-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden'
+                'flex gap-2 grow overflow-y-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden'
               }
               style={{
                 maskImage:
@@ -137,19 +202,23 @@ const DatabaseSection = () => {
                 <div
                   key={i}
                   className={
-                    'flex flex-col min-w-40 max-w-28 cursor-pointer hover:brightness-95 transition-all p-2 bg-theme-bg text-theme-text rounded-md'
+                    'flex flex-col max-w-40 cursor-pointer hover:brightness-95 transition-all p-2 bg-theme-bg text-theme-text rounded-md'
                   }
                 >
-                  <p className={'text-sm font-bold font-theme-display'}>
+                  <p
+                    className={
+                      'text-sm text-nowrap overflow-x-hidden overflow-ellipsis font-bold font-theme-display'
+                    }
+                  >
                     {n.title}
                   </p>
-                  <p className={'text-xs font-theme'}>{n.body}</p>
+                  <p className={'text-xs font-theme h-0 grow'}>{n.body}</p>
                 </div>
               ))}
               <div ref={endRef as any} />
             </div>
           </div>
-          <SkeletonBottomLeft className={'w-full'} />
+          <SkeletonBottomLeft className={'w-full mt-4'} />
         </div>
         <div className={'flex flex-col'}>
           <SkeletonBottomRight className={'w-full mb-4'} />
@@ -170,20 +239,14 @@ const DatabaseSection = () => {
               />
 
               <defs>
-                <linearGradient
-                  id='gradient'
-                  x1='0%'
-                  y1='0%'
-                  x2='100%'
-                  y2='100%'
-                >
+                <linearGradient id='gradient' x1='0%' y1='0%' x2='0%' y2='100%'>
                   <stop
                     offset='0%'
-                    style={{ stopColor: 'var(--theme-main-color-bg)' }}
+                    style={{ stopColor: 'var(--theme-main-color)' }}
                   />
                   <stop
                     offset='0%'
-                    style={{ stopColor: 'var(--theme-main-color-bg)' }}
+                    style={{ stopColor: 'var(--theme-main-color)' }}
                   >
                     <animate
                       attributeName='offset'
@@ -195,7 +258,7 @@ const DatabaseSection = () => {
                   </stop>
                   <stop
                     offset='0%'
-                    style={{ stopColor: 'var(--theme-main-color)' }}
+                    style={{ stopColor: 'var(--theme-main-color-bg)' }}
                   >
                     <animate
                       attributeName='offset'
@@ -207,7 +270,7 @@ const DatabaseSection = () => {
                   </stop>
                   <stop
                     offset='0%'
-                    style={{ stopColor: 'var(--theme-main-color-bg)' }}
+                    style={{ stopColor: 'var(--theme-main-color)' }}
                   >
                     <animate
                       attributeName='offset'

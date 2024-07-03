@@ -1,11 +1,11 @@
 import { APP_NAME } from '@/utils/constants';
+import Image from 'next/image';
+import heroImage from './heroImage.png';
 
 const HeroSection = () => {
   return (
     <section
-      className={
-        'pt-24 pb-8 flex flex-col items-center max-w-[932px] px-8 w-full mx-auto'
-      }
+      className={'pt-24 pb-8 flex flex-col items-center px-8 w-full mx-auto'}
     >
       <div className={'max-w-[800px] mb-14'}>
         <h1
@@ -21,7 +21,12 @@ const HeroSection = () => {
         </p>
       </div>
       {/* Hero image/svg goes here */}
-      <div className={'w-full aspect-video bg-theme-surface rounded-xl'} />
+      {/*<div className={'w-full aspect-video bg-theme-surface rounded-xl'} />*/}
+      <Image
+        src={heroImage}
+        className={'max-w-[1080px]'}
+        alt={'Example Journal layout'}
+      />
     </section>
   );
 };

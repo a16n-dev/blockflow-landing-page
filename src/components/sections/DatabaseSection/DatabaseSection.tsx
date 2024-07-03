@@ -11,9 +11,11 @@ import {
   Settings2Icon,
   TrashIcon,
 } from 'lucide-react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import styles from './DatabaseSection.module.css';
+
+type Position = [x: number, y: number];
 
 const DatabaseSection = () => {
   const [todos, setTodos] = useState<{ label: string; checked: boolean }[]>([
@@ -73,29 +75,33 @@ const DatabaseSection = () => {
             }
           >
             <FileIcon />
-            Notes
+            Notes Database
           </div>
         </div>
-        <div className={'bg-theme-surface p-2 rounded-lg flex flex-col'}>
+        <div
+          className={
+            'bg-theme-surface p-2 rounded-lg flex flex-col z-10 min-h-20'
+          }
+        >
           <div
             className={
               'flex items-center font-bold gap-1 bg-theme-bg self-start py-1 pl-1 pr-4 rounded-lg'
             }
           >
             <FileIcon />
-            Tasks
+            Tasks Database
           </div>
         </div>
       </div>
       {/* Databases in spread */}
       <div
-        className={`${styles.card} w-full rounded-xl flex p-8 gap-8 text-black/5 aspect-[16/10]`}
+        className={`${styles.card} w-full rounded-xl grid grid-col-1 md:grid-cols-3 p-8 gap-8 text-black/5 aspect-[16/10]`}
       >
-        <div className={'flex-col gap-4 hidden md:flex'}>
+        <div className={'flex-col gap-4 hidden md:flex col-span-2'}>
           <SkeletonTopLeft className={'w-full'} />
           <div
             className={
-              'grow bg-theme-main-bg border-theme-main border-2 w-[600px] rounded-lg relative right-4 shadow-xl flex flex-col p-4 text-theme-main'
+              'grow bg-theme-main-bg border-theme-main border-2 max-w-[600px] rounded-lg relative right-4 shadow-xl flex flex-col p-4 text-theme-main'
             }
           >
             <div className={'flex gap-1 items-center pb-4'}>
@@ -145,8 +151,77 @@ const DatabaseSection = () => {
           </div>
           <SkeletonBottomLeft className={'w-full'} />
         </div>
-        <div className={'flex flex-col gap-4'}>
-          <SkeletonBottomRight className={'w-full'} />
+        <div className={'flex flex-col'}>
+          <SkeletonBottomRight className={'w-full mb-4'} />
+          <div className={'relative h-0'}>
+            <svg
+              width='272'
+              height='376'
+              viewBox='0 0 272 376'
+              fill='none'
+              xmlns='http://www.w3.org/2000/svg'
+              className={'absolute -bottom-4'}
+            >
+              <path
+                d='M22.0696 3C-0.58804 160.989 170.601 181.375 154.992 373'
+                stroke='url(#gradient)'
+                strokeWidth='8'
+                strokeLinecap='square'
+              />
+
+              <defs>
+                <linearGradient
+                  id='gradient'
+                  x1='0%'
+                  y1='0%'
+                  x2='100%'
+                  y2='100%'
+                >
+                  <stop
+                    offset='0%'
+                    style={{ stopColor: 'var(--theme-main-color-bg)' }}
+                  />
+                  <stop
+                    offset='0%'
+                    style={{ stopColor: 'var(--theme-main-color-bg)' }}
+                  >
+                    <animate
+                      attributeName='offset'
+                      values='0;0;1'
+                      keyTimes={'0;0.2;1'}
+                      dur='1s'
+                      repeatCount='indefinite'
+                    />
+                  </stop>
+                  <stop
+                    offset='0%'
+                    style={{ stopColor: 'var(--theme-main-color)' }}
+                  >
+                    <animate
+                      attributeName='offset'
+                      values='0;1;1'
+                      key={'0;.1;.9;1'}
+                      dur='1s'
+                      repeatCount='indefinite'
+                    />
+                  </stop>
+                  <stop
+                    offset='0%'
+                    style={{ stopColor: 'var(--theme-main-color-bg)' }}
+                  >
+                    <animate
+                      attributeName='offset'
+                      values='0;.1;1'
+                      keyTimes={'0;0.1;.9'}
+                      dur='1s'
+                      repeatCount='indefinite'
+                    />
+                  </stop>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+
           <div
             className={
               'bg-theme-bg grow h-0 rounded-lg relative left-4 shadow-xl flex flex-col p-4 text-theme-text'
@@ -215,7 +290,7 @@ const DatabaseSection = () => {
               </div>
             </div>
           </div>
-          <SkeletonTopRight className={'w-full'} />
+          <SkeletonTopRight className={'w-full mt-4'} />
         </div>
       </div>
     </section>

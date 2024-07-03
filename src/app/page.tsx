@@ -29,9 +29,9 @@ const Home = async () => {
       <main className='flex flex-col min-h-screen'>
         <HeroSection />
         <JoinBetaSection />
-        <UseCaseSection />
         <CustomizationSection />
         <DatabaseSection />
+        <UseCaseSection />
         <MotivationSection />
         <FeaturesSection />
       </main>

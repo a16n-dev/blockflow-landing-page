@@ -3,6 +3,7 @@ import { Rubik } from 'next/font/google';
 import { Open_Sans } from 'next/font/google';
 import './globals.css';
 import Footer from '@/components/layout/Footer/Footer';
+import Header from '@/components/layout/Header/Header';
 
 const openSans = Open_Sans({ subsets: ['latin'] });
 
@@ -19,6 +20,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={openSans.className}>
+        <Header />
         {children}
         <Footer />
       </body>

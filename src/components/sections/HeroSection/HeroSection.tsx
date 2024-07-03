@@ -1,11 +1,12 @@
 import { APP_NAME } from '@/utils/constants';
 import Image from 'next/image';
 import heroImage from './heroImage.png';
+import styles from './HeroSection.module.css';
 
 const HeroSection = () => {
   return (
     <section
-      className={'pt-24 pb-8 flex flex-col items-center px-8 w-full mx-auto'}
+      className={`${styles.background} pt-24 pb-8 flex flex-col items-center px-8 w-full mx-auto`}
     >
       <div className={'max-w-[800px] mb-14'}>
         <h1

@@ -20,7 +20,6 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={openSans.className}>
-        <Header />
         {children}
         <Footer />
       </body>

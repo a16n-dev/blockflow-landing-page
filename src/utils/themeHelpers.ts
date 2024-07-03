@@ -40,8 +40,8 @@ const fontHrefs: Record<Fonts, string> = {
 export const THEME_PROVIDER_ID = 'landing-page-theme-provider';
 
 export const defaultTokens: LandingPageThemeTokens = {
-  mainColor: '#3f6ff1',
-  mainColorBg: '#e6e9f8',
+  mainColor: '#90b065',
+  mainColorBg: '#E8F3D9',
   bgColor: '#fff',
   surfaceColor: '#ededed',
   textColor: '#31362B',

@@ -46,7 +46,7 @@ const mapStateToTheme = (
 });
 
 const mapColor: Record<string, [string, string]> = {
-  green: ['#98C65B', '#E8F3D9'],
+  green: ['#90b065', '#E8F3D9'],
   teal: ['#5fbb8b', '#e6f8f1'],
   blue: ['#3f6ff1', '#e6e9f8'],
   purple: ['#803ff1', '#e9d6ef'],
@@ -59,7 +59,7 @@ const CustomizationInteractiveSection = () => {
     bgStyle: 'grid',
     headingFont: Fonts.OpenSans,
     paragraphFont: Fonts.OpenSans,
-    colorScheme: themeColor.blue,
+    colorScheme: themeColor.green,
   });
 
   useEffect(() => {

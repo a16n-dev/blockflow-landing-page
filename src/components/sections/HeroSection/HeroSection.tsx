@@ -11,13 +11,13 @@ const HeroSection = () => {
       <div className={'max-w-[800px] mb-14'}>
         <h1
           className={
-            'text-6xl font-theme-display text-center font-bold text-theme-text mb-4'
+            'text-5xl md:text-6xl font-theme-display text-center font-bold text-theme-text mb-4'
           }
         >
           {APP_NAME}
         </h1>
-        <p className={'font-theme text-2xl text-theme-text text-center'}>
-          Get your thoughts down, customize, and organize your life. <br /> All
+        <p className={'font-theme text-xl text-theme-text text-center'}>
+          Get your thoughts down, style them, and organize your life. <br /> All
           in one place.
         </p>
       </div>

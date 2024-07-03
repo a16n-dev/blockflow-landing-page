@@ -9,8 +9,18 @@ const Header = () => {
       }
     >
       <div className={'px-4 py-2 flex gap-2'}>
-        <LeafIcon />
+        <LeafIcon className={'text-theme-main'} />
         <div className={'font-bold'}>{APP_NAME}</div>
+      </div>
+      <div className={'grow'} />
+      <div className={'px-4'}>
+        <button
+          className={
+            'bg-theme-main text-sm font-semibold text-theme-bg rounded-md px-2 py-1'
+          }
+        >
+          Get beta access
+        </button>
       </div>
     </header>
   );

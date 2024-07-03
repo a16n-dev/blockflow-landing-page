@@ -10,6 +10,7 @@ import FeaturesSection from '@/components/sections/FeaturesSection/FeaturesSecti
 import CustomizationSection from '@/components/sections/CustomizationSection/CustomizationSection';
 import MotivationSection from '@/components/sections/MotivationSection/MotivationSection';
 import DatabaseSection from '@/components/sections/DatabaseSection/DatabaseSection';
+import Header from '@/components/layout/Header/Header';
 
 export async function generateMetadata() {
   return {
@@ -27,6 +28,7 @@ const Home = async () => {
       }}
     >
       <main className='flex flex-col min-h-screen'>
+        <Header />
         <HeroSection />
         <JoinBetaSection />
         <CustomizationSection />
@@ -34,6 +36,7 @@ const Home = async () => {
         <UseCaseSection />
         <MotivationSection />
         <FeaturesSection />
+        <JoinBetaSection />
       </main>
     </div>
   );

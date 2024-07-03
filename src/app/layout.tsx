@@ -4,6 +4,7 @@ import { Open_Sans } from 'next/font/google';
 import './globals.css';
 import Footer from '@/components/layout/Footer/Footer';
 import Header from '@/components/layout/Header/Header';
+import { Analytics } from '@vercel/analytics/react';
 
 const openSans = Open_Sans({ subsets: ['latin'] });
 
@@ -21,6 +22,7 @@ export default function RootLayout({
     <html lang='en'>
       <body className={openSans.className}>
         {children}
+        <Analytics />
         <Footer />
       </body>
     </html>

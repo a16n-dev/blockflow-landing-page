@@ -13,6 +13,7 @@
     "@types/color": "^3.0.6",
     "axios": "^1.7.2",
     "color": "^4.2.3",
+    "date-fns": "^3.6.0",
     "lucide-react": "^0.400.0",
     "next": "14.2.4",
     "react": "^18",

@@ -200,7 +200,7 @@ const DatabaseSection = () => {
             <SkeletonBottomLeft className={'w-full mt-4'} />
           </div>
           <div className={'flex flex-col'}>
-            <SkeletonBottomRight className={'hidden md:visible w-full mb-4'} />
+            <SkeletonBottomRight className={'hidden md:block w-full mb-4'} />
             <SkeletonBottomLeft className={'w-full md:hidden mb-4'} />
             <div className={'relative h-0'}>
               <svg
@@ -339,7 +339,7 @@ const DatabaseSection = () => {
                 </div>
               </div>
             </div>
-            <SkeletonTopRight className={'hidden md:visible w-full mt-4'} />
+            <SkeletonTopRight className={'hidden md:block w-full mt-4'} />
           </div>
         </div>
       </div>

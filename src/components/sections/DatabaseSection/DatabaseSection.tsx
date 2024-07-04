@@ -319,7 +319,6 @@ const DatabaseSection = () => {
                           );
                         }}
                         className={'text-sm font-theme'}
-                        contentEditable
                       >
                         {todo.label}
                       </div>

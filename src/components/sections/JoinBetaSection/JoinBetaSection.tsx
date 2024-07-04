@@ -1,5 +1,6 @@
 import { APP_NAME } from '@/utils/constants';
 import styles from './JoinBetaSection.module.css';
+import JoinBetaForm from '@/components/common/JoinBetaForm/JoinBetaForm';
 const JoinBetaSection = () => {
   return (
     <section className={'py-16 max-w-[932px] px-4 w-full mx-auto'}>
@@ -23,19 +24,7 @@ const JoinBetaSection = () => {
           <br />
           {`Apply for beta access now and become a part of the journey.`}
         </p>
-        <form className={'flex gap-2'}>
-          <input
-            className={'rounded-md p-2 text-theme-text focus:border-none'}
-            placeholder={'example@mail.com'}
-          />
-          <button
-            className={
-              'bg-theme-bg rounded-md px-4 py-2 font-theme font-medium text-theme-main'
-            }
-          >
-            Submit
-          </button>
-        </form>
+        <JoinBetaForm />
       </div>
     </section>
   );

@@ -15,7 +15,8 @@ import Header from '@/components/layout/Header/Header';
 export async function generateMetadata() {
   return {
     title: `BlockFlow`,
-    description: 'Power your content with Notion',
+    description:
+      'Get your thoughts down, style them, and organize your life. All in one place.',
   };
 }
 

@@ -6,7 +6,7 @@ import CardConstructionGraphic from '@/components/sections/CustomizationSection/
 import TryItOutText from '@/components/sections/CustomizationSection/TryItOutText';
 import { useEffect, useState } from 'react';
 import { Fonts, LandingPageThemeTokens, setTheme } from '@/utils/themeHelpers';
-import { Grid3x3Icon, GripIcon, SquareIcon } from 'lucide-react';
+import { CheckIcon, Grid3x3Icon, GripIcon, SquareIcon } from 'lucide-react';
 import Color from 'color';
 import ComboBox from '@/components/common/ComboBox/ComboBox';
 
@@ -66,6 +66,12 @@ const CustomizationInteractiveSection = () => {
     setTheme(mapStateToTheme(state));
   }, [state]);
 
+  const TODOS = [
+    { id: 1, text: 'Buy milk', checked: false },
+    { id: 2, text: 'Buy eggs', checked: true },
+    { id: 3, text: 'Buy', checked: true },
+  ];
+
   return (
     <div className={'flex max-w-[1100px] w-full py-12 gap-4'}>
       <div className={'overflow-hidden flex justify-end'}>
@@ -96,6 +102,20 @@ const CustomizationInteractiveSection = () => {
               <p className={'text-lg font-bold font-theme-display'}>
                 Task List
               </p>
+              <div className={'flex flex-col gap-4 mt-4'}>
+                {TODOS.map((item, i) => (
+                  <div key={i} className={'flex gap-2'}>
+                    <div
+                      className={
+                        'w-5 h-5 rounded-md bg-theme-bg text-theme-main'
+                      }
+                    >
+                      <CheckIcon size={20} />
+                    </div>
+                    <div>{item.text}</div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>

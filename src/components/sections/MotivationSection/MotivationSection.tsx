@@ -3,6 +3,7 @@ import BackgroundImage from './background.png';
 import Image from 'next/image';
 import style from './MotivationSection.module.css';
 import { LeafIcon } from 'lucide-react';
+import Logo from '@/components/common/Logo/Logo';
 
 const MotivationSection = () => {
   return (
@@ -27,7 +28,7 @@ const MotivationSection = () => {
                   'flex items-center justify-center w-24 h-24 bg-white rounded-3xl shadow-lg text-theme-main'
                 }
               >
-                <LeafIcon size={48} />
+                <Logo size={48} />
               </div>
             </div>
           </div>

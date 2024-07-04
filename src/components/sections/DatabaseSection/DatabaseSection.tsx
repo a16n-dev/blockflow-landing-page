@@ -92,8 +92,8 @@ const DatabaseSection = () => {
       </p>
       {/* Databases in isolation */}
       <div className={'overflow-y-hidden mt-4'}>
-        <div className={'grid grid-cols-2 mb-16 gap-8 w-full'}>
-          <div className={'flex flex-col z-20'}>
+        <div className={'grid grid-cols-1 md:grid-cols-2 mb-16 gap-8 w-full'}>
+          <div className={'md:flex hidden flex-col z-20'}>
             <div
               className={
                 'bg-theme-main-bg text-theme-main border-2 font-bold border-theme-main self-end flex gap-2 px-4 py-2 rounded-lg'
@@ -106,7 +106,7 @@ const DatabaseSection = () => {
           <div className={'flex flex-col z-20'}>
             <div
               className={
-                'bg-theme-main-bg text-theme-main border-2 font-bold border-theme-main self-start flex gap-2 px-4 py-2 rounded-lg'
+                'bg-theme-main-bg text-theme-main border-2 font-bold border-theme-main md:self-start flex gap-2 px-4 py-2 rounded-lg'
               }
             >
               <FolderOpenIcon />
@@ -139,11 +139,11 @@ const DatabaseSection = () => {
             </div>
             <div
               className={
-                'grow bg-theme-main-bg border-theme-main border-2 max-w-[500px] rounded-lg relative right-4 shadow-xl flex flex-col p-4 text-theme-main'
+                'grow bg-theme-bg max-w-[500px] rounded-lg relative right-4 shadow-xl flex flex-col p-4 text-theme-text'
               }
             >
               <div className={'flex gap-1 items-center pb-4'}>
-                <FileClockIcon />
+                <FileClockIcon className={'text-theme-main'} />
                 <p className={'font-bold font-theme-display grow'}>
                   Recent Notes
                 </p>
@@ -175,7 +175,7 @@ const DatabaseSection = () => {
                   <div
                     key={i}
                     className={
-                      'flex flex-col max-w-40 cursor-pointer hover:brightness-95 transition-all p-2 bg-theme-bg text-theme-text rounded-md'
+                      'flex border flex-col max-w-40 cursor-pointer hover:brightness-95 transition-all p-2 bg-theme-bg text-theme-text rounded-md'
                     }
                   >
                     <p
@@ -200,7 +200,8 @@ const DatabaseSection = () => {
             <SkeletonBottomLeft className={'w-full mt-4'} />
           </div>
           <div className={'flex flex-col'}>
-            <SkeletonBottomRight className={'w-full mb-4'} />
+            <SkeletonBottomRight className={'hidden md:visible w-full mb-4'} />
+            <SkeletonBottomLeft className={'w-full md:hidden mb-4'} />
             <div className={'relative h-0'}>
               <svg
                 width='272'
@@ -272,7 +273,7 @@ const DatabaseSection = () => {
 
             <div
               className={
-                'bg-theme-bg grow h-0 rounded-lg relative left-4 shadow-xl flex flex-col p-4 text-theme-text'
+                'bg-theme-bg min-h-44 md:min-h-32 grow h-0 rounded-lg relative md:left-4 shadow-xl flex flex-col p-4 text-theme-text'
               }
             >
               <div className={'flex gap-1 items-center'}>
@@ -338,7 +339,7 @@ const DatabaseSection = () => {
                 </div>
               </div>
             </div>
-            <SkeletonTopRight className={'w-full mt-4'} />
+            <SkeletonTopRight className={'hidden md:visible w-full mt-4'} />
           </div>
         </div>
       </div>

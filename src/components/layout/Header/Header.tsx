@@ -1,5 +1,6 @@
 import { LeafIcon } from 'lucide-react';
 import { APP_NAME } from '@/utils/constants';
+import Logo from '@/components/common/Logo/Logo';
 
 const Header = () => {
   return (
@@ -9,7 +10,7 @@ const Header = () => {
       }
     >
       <div className={'px-4 py-2 flex gap-2'}>
-        <LeafIcon className={'text-theme-main'} />
+        <Logo size={24} className={'text-theme-main'} />
         <div className={'font-bold'}>{APP_NAME}</div>
       </div>
       <div className={'grow'} />

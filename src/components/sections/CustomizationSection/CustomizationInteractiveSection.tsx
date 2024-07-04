@@ -6,7 +6,13 @@ import CardConstructionGraphic from '@/components/sections/CustomizationSection/
 import TryItOutText from '@/components/sections/CustomizationSection/TryItOutText';
 import { useEffect, useState } from 'react';
 import { Fonts, LandingPageThemeTokens, setTheme } from '@/utils/themeHelpers';
-import { CheckIcon, Grid3x3Icon, GripIcon, SquareIcon } from 'lucide-react';
+import {
+  CheckIcon,
+  CheckSquare2Icon,
+  Grid3x3Icon,
+  GripIcon,
+  SquareIcon,
+} from 'lucide-react';
 import Color from 'color';
 import ComboBox from '@/components/common/ComboBox/ComboBox';
 
@@ -67,9 +73,9 @@ const CustomizationInteractiveSection = () => {
   }, [state]);
 
   const TODOS = [
-    { id: 1, text: 'Buy milk', checked: false },
-    { id: 2, text: 'Buy eggs', checked: true },
-    { id: 3, text: 'Buy', checked: true },
+    { label: 'Schedule dinner with friends', checked: false },
+    { label: 'Finish writing notes for class', checked: true },
+    { label: 'Pick up groceries for dinner', checked: true },
   ];
 
   return (
@@ -99,20 +105,29 @@ const CustomizationInteractiveSection = () => {
             <div
               className={'bg-theme-main text-theme-bg m-2 mb-3 rounded-xl p-4'}
             >
-              <p className={'text-lg font-bold font-theme-display'}>
-                Task List
-              </p>
+              <div className={'flex gap-1 items-center'}>
+                <CheckSquare2Icon size={'24'} />
+                <p className={'text-lg font-bold font-theme-display'}>
+                  Task List
+                </p>
+              </div>
               <div className={'flex flex-col gap-4 mt-4'}>
                 {TODOS.map((item, i) => (
-                  <div key={i} className={'flex gap-2'}>
-                    <div
-                      className={
-                        'w-5 h-5 rounded-md bg-theme-bg text-theme-main'
-                      }
-                    >
-                      <CheckIcon size={20} />
-                    </div>
-                    <div>{item.text}</div>
+                  <div key={i} className={'flex gap-2 items-center'}>
+                    {item.checked ? (
+                      <div
+                        className={
+                          'w-5 h-5 rounded-md bg-theme-bg text-theme-main'
+                        }
+                      >
+                        <CheckIcon size={20} />
+                      </div>
+                    ) : (
+                      <div
+                        className={'w-5 h-5 rounded-md border border-theme-bg'}
+                      />
+                    )}
+                    <div className={'font-theme'}>{item.label}</div>
                   </div>
                 ))}
               </div>

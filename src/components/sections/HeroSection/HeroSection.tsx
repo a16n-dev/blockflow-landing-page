@@ -24,17 +24,17 @@ const HeroSection = () => {
           Beta
         </div>
         <p className={'font-theme text-xl text-theme-text text-center mt-4'}>
-          Get your thoughts down, style them, and organize your life. <br /> All
-          in one place.
+          Create journals to get your thoughts down, style them, and organize
+          your life. <br /> All in one place.
         </p>
       </div>
       {/* Hero image/svg goes here */}
       {/*<div className={'w-full aspect-video bg-theme-surface rounded-xl'} />*/}
-      <Image
-        src={heroImage}
-        className={'max-w-[1080px]'}
-        alt={'Example Journal layout'}
-      />
+      {/*<Image*/}
+      {/*  src={heroImage}*/}
+      {/*  className={'max-w-[1080px]'}*/}
+      {/*  alt={'Example Journal layout'}*/}
+      {/*/>*/}
     </section>
   );
 };

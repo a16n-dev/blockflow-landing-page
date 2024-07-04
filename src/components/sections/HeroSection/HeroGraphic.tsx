@@ -49,11 +49,11 @@ const HeroGraphic = () => {
   return (
     <div
       className={
-        'aspect-[12/7] w-full bg-theme-bg max-w-[800px] border rounded-2xl shadow-xl pointer-events-none select-none '
+        'aspect-[16/9] md:aspect-[12/7] w-full bg-theme-bg max-w-[800px] border rounded-2xl shadow-xl pointer-events-none select-none '
       }
     >
       <div
-        className={'grid grid-cols-8 gap-4 p-4 pb-0 h-full'}
+        className={'grid grid-cols-1 md:grid-cols-8 gap-4 p-4 pb-0 h-full'}
         style={{ background: 'var(--theme-bg-texture)', backgroundSize: 12 }}
       >
         <div className={'flex flex-col gap-4 col-span-5'}>
@@ -66,7 +66,7 @@ const HeroGraphic = () => {
           </div>
           <div
             className={
-              'p-4 bg-theme-main-bg border rounded-lg border-theme-main h-[200px] flex flex-col'
+              'p-4 hidden bg-theme-main-bg border rounded-lg border-theme-main h-[200px] md:flex flex-col'
             }
           >
             <div className={'flex gap-2 items-center text-theme-main pb-2'}>

@@ -28,7 +28,7 @@ const MotivationSection = () => {
                   'flex items-center justify-center w-24 h-24 bg-white rounded-3xl shadow-lg text-theme-main'
                 }
               >
-                <Logo size={48} />
+                <Logo size={64} />
               </div>
             </div>
           </div>

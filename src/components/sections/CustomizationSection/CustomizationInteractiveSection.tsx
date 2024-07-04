@@ -80,9 +80,9 @@ const CustomizationInteractiveSection = () => {
 
   return (
     <div className={'flex max-w-[1100px] w-full py-12 gap-4'}>
-      <div className={'overflow-hidden flex justify-end'}>
+      <div className={'overflow-hidden flex justify-end -mr-24 md:mr-0'}>
         <div
-          className={'flex flex-col mix-blend-multiply w-[720px]'}
+          className={'flex flex-col mix-blend-multiply w-[720px] '}
           style={{ flexGrow: 1 }}
         >
           <HeadingConstructionGraphic />

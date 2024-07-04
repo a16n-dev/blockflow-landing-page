@@ -12,6 +12,7 @@ import MotivationSection from '@/components/sections/MotivationSection/Motivatio
 import DatabaseSection from '@/components/sections/DatabaseSection/DatabaseSection';
 import Header from '@/components/layout/Header/Header';
 import { Metadata } from 'next';
+import JoinBetaCondensedSection from '@/components/sections/JoinBetaCondensedSection/JoinBetaCondensedSection';
 
 export function generateMetadata(): Metadata {
   return {
@@ -35,7 +36,7 @@ const Home = async () => {
       <main className='flex flex-col min-h-screen'>
         <Header />
         <HeroSection />
-        <JoinBetaSection />
+        <JoinBetaCondensedSection />
         <CustomizationSection />
         <DatabaseSection />
         <UseCaseSection />

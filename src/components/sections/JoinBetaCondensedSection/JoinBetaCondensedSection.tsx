@@ -1,6 +1,6 @@
 import { APP_NAME } from '@/utils/constants';
 import styles from './JoinBetaSection.module.css';
-const JoinBetaSection = () => {
+const JoinBetaCondensedSection = () => {
   return (
     <section className={'py-16 max-w-[932px] px-4 w-full mx-auto'}>
       <div
@@ -19,9 +19,6 @@ const JoinBetaSection = () => {
           }
         >
           {`If you want a digital journaling tool with features created around your feedback, apply for beta access and we’ll be in touch!`}
-          <br />
-          <br />
-          {`Apply for beta access now and become a part of the journey.`}
         </p>
         <form className={'flex gap-2'}>
           <input
@@ -41,4 +38,4 @@ const JoinBetaSection = () => {
   );
 };
 
-export default JoinBetaSection;
+export default JoinBetaCondensedSection;

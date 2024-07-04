@@ -45,7 +45,7 @@ const MotivationSection = () => {
           <br />
           <p
             className={'text-theme-text font-theme'}
-          >{`Apps like Zinnia and Goodnotes gave me the customization we wanted for bullet journaling, but lacked the powerful functionality that Notion’s databases offered.`}</p>
+          >{`Apps like Zinnia and Goodnotes give you the customization for bullet journaling, but lack the powerful functionality that Notion’s databases offer.`}</p>
           <br />
           <p
             className={'text-theme-text font-theme'}

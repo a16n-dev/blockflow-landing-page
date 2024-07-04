@@ -34,12 +34,13 @@ const Home = async () => {
       }}
     >
       <main className='flex flex-col min-h-screen'>
-        <Header />
+        {/*<Header />*/}
         <HeroSection />
         <JoinBetaCondensedSection />
         <CustomizationSection />
         <DatabaseSection />
         <UseCaseSection />
+        <hr className={'mx-auto max-w-[600px] w-full border-theme-surface'} />
         <MotivationSection />
         <FeaturesSection />
         <JoinBetaSection />

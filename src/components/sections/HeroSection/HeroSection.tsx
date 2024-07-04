@@ -8,7 +8,7 @@ import HeroGraphic from '@/components/sections/HeroSection/HeroGraphic';
 const HeroSection = () => {
   return (
     <section
-      className={`${styles.background} pt-24 pb-8 flex flex-col items-center px-8 w-full mx-auto`}
+      className={`${styles.background} pt-16 pb-8 flex flex-col items-center px-8 w-full mx-auto`}
     >
       <div className={'max-w-[800px] mb-14 flex flex-col'}>
         <Logo className={'self-center mb-4 text-theme-main'} size={64} />

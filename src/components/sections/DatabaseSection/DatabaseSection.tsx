@@ -96,7 +96,7 @@ const DatabaseSection = () => {
           <div className={'md:flex hidden flex-col z-20'}>
             <div
               className={
-                'bg-theme-main-bg text-theme-main border-2 font-bold border-theme-main self-end flex gap-2 px-4 py-2 rounded-lg'
+                'bg-theme-main-bg font-theme-display text-theme-main border-2 font-bold border-theme-main self-end flex gap-2 px-4 py-2 rounded-lg'
               }
             >
               <FolderOpenIcon />
@@ -106,7 +106,7 @@ const DatabaseSection = () => {
           <div className={'flex flex-col z-20'}>
             <div
               className={
-                'bg-theme-main-bg text-theme-main border-2 font-bold border-theme-main md:self-start flex gap-2 px-4 py-2 rounded-lg'
+                'bg-theme-main-bg font-theme-display text-theme-main border-2 font-bold border-theme-main md:self-start flex gap-2 px-4 py-2 rounded-lg'
               }
             >
               <FolderOpenIcon />

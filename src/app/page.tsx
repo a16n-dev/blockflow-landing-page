@@ -43,7 +43,7 @@ const Home = async () => {
         <hr className={'mx-auto max-w-[600px] w-full border-theme-surface'} />
         <MotivationSection />
         <FeaturesSection />
-        <JoinBetaSection />
+        <JoinBetaCondensedSection />
       </main>
     </div>
   );

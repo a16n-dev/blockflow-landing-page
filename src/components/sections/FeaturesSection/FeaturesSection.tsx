@@ -18,7 +18,7 @@ const FeaturesSection = () => {
             'font-theme-display text-theme-text text-4xl font-bold text-center'
           }
         >
-          And more...
+          And More...
         </h2>
         <div
           className={

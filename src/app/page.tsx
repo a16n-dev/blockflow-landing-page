@@ -11,12 +11,16 @@ import CustomizationSection from '@/components/sections/CustomizationSection/Cus
 import MotivationSection from '@/components/sections/MotivationSection/MotivationSection';
 import DatabaseSection from '@/components/sections/DatabaseSection/DatabaseSection';
 import Header from '@/components/layout/Header/Header';
+import { Metadata } from 'next';
 
-export async function generateMetadata() {
+export function generateMetadata(): Metadata {
   return {
     title: `BlockFlow`,
     description:
       'Get your thoughts down, style them, and organize your life. All in one place.',
+    openGraph: {
+      images: ['/social.png'],
+    },
   };
 }
 

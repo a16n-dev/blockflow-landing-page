@@ -11,7 +11,7 @@ const Header = () => {
     >
       <div className={'px-4 py-2 flex gap-2'}>
         <Logo size={24} className={'text-theme-main'} />
-        <div className={'font-bold'}>{APP_NAME}</div>
+        <div className={'font-bold text-theme-text'}>{APP_NAME}</div>
       </div>
       <div className={'grow'} />
       <div className={'px-4'}>

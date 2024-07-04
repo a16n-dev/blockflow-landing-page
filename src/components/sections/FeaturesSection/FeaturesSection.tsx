@@ -70,7 +70,7 @@ const FeaturesSection = () => {
             </div>
             <p className={'text-theme-text font-theme'}>
               Get started in minutes with our growing library of themes and
-              templates
+              templates.
             </p>
           </div>
           <div className={'flex flex-col'}>

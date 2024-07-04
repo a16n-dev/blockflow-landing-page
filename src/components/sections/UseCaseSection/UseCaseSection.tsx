@@ -66,7 +66,7 @@ const UseCaseSection = () => {
             Habit Tracking
           </h3>
           <p className={'text-theme-text font-theme opacity-75 pb-16 grow'}>
-            {'Track habits and keep yourself accountable to hit your goals'}
+            {'Track habits and keep yourself accountable to hit your goals.'}
           </p>
           <div className={'self-end px-4'}>
             <HabitTrackerGraphic />
@@ -85,7 +85,7 @@ const UseCaseSection = () => {
           </h3>
           <p className={'text-theme-text font-theme opacity-75 pb-16 grow'}>
             {
-              'Create, store and categorize tasks. Use reminders to help you stay on top of your life'
+              'Create, store and categorize tasks. Use reminders to help you stay on top of your life.'
             }
           </p>
           <div className={'self-end px-4'}>
@@ -105,7 +105,7 @@ const UseCaseSection = () => {
           </h3>
           <p className={'text-theme-text font-theme opacity-75 pb-16 grow'}>
             {
-              'Keep a daily journal or easily jot down thoughts as inspiration strikes'
+              'Keep a daily journal or easily jot down thoughts as inspiration pops up.'
             }
           </p>
           <div className={'self-end px-4'}>

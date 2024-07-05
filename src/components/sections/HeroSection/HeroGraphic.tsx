@@ -9,7 +9,7 @@ import {
   MessageSquareQuote,
   PlusCircle,
 } from 'lucide-react';
-import { format, add } from 'date-fns';
+import { format } from 'date-fns';
 import { NOTES_ITEMS } from '@/utils/constants';
 
 const HeroGraphic = () => {

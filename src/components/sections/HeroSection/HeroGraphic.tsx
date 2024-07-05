@@ -20,7 +20,7 @@ const HeroGraphic = () => {
   ];
 
   return (
-    <div className={'flex'}>
+    <div className={'hidden md:flex'}>
       <div
         className={
           'aspect-[16/9] md:aspect-[12/7] w-full bg-theme-bg max-w-[800px] border rounded-2xl shadow-xl pointer-events-none select-none '

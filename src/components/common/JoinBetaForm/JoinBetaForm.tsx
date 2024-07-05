@@ -8,8 +8,8 @@ const JoinBetaForm = () => {
 
     const load = () => {
       // Load Tally embeds
-      if (typeof Tally !== 'undefined') {
-        Tally.loadEmbeds();
+      if (typeof (window as any).Tally !== 'undefined') {
+        (window as any).Tally.loadEmbeds();
         return;
       }
 
@@ -17,12 +17,12 @@ const JoinBetaForm = () => {
       document
         .querySelectorAll('iframe[data-tally-src]:not([src])')
         .forEach((iframeEl) => {
-          iframeEl.src = iframeEl.dataset.tallySrc;
+          (iframeEl as any).src = (iframeEl as any).dataset.tallySrc;
         });
     };
 
     // If Tally is already loaded, load the embeds
-    if (typeof Tally !== 'undefined') {
+    if (typeof (window as any).Tally !== 'undefined') {
       load();
       return;
     }
@@ -39,7 +39,13 @@ const JoinBetaForm = () => {
   }, []);
 
   return (
-    <div>
+    <div
+      className={'relative'}
+      style={{
+        maskImage:
+          'linear-gradient(0deg, transparent 50%, #000000 51%), linear-gradient(-90deg, transparent 50%, #000000 51%)',
+      }}
+    >
       <iframe
         data-tally-src='https://tally.so/embed/mJ0lZd?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1'
         loading='lazy'
@@ -48,7 +54,6 @@ const JoinBetaForm = () => {
         frameBorder={0}
         marginHeight={0}
         marginWidth={0}
-        title='Newsletter subscribers'
       ></iframe>
     </div>
   );

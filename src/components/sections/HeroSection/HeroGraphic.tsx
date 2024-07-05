@@ -10,40 +10,13 @@ import {
   PlusCircle,
 } from 'lucide-react';
 import { format, add } from 'date-fns';
+import { NOTES_ITEMS } from '@/utils/constants';
 
 const HeroGraphic = () => {
   const TODOS = [
     { label: 'Schedule dinner with friends', checked: false },
     { label: 'Finish writing notes for class', checked: true },
     { label: 'Pick up groceries for dinner', checked: true },
-  ];
-
-  const notes = [
-    {
-      title: format(add(new Date(), { days: -5 }), 'EEE do MMM'),
-      body: 'This is the is the  body of the note',
-      timestamp: '2024-07-01T12:12:12Z',
-    },
-    {
-      title: format(add(new Date(), { days: -4 }), 'EEE do MMM'),
-      body: 'This is the  is the  is the body of the note',
-      timestamp: '2024-07-01T12:12:12Z',
-    },
-    {
-      title: format(add(new Date(), { days: -3 }), 'EEE do MMM'),
-      body: 'This is the body of t is the  is the  is the he note',
-      timestamp: '2024-07-01T12:12:12Z',
-    },
-    {
-      title: format(add(new Date(), { days: -2 }), 'EEE do MMM'),
-      body: 'This is is the  is the  the body of the noteThe noteThe noteThe noteThe noteThe noteThe noteThe noteThis is is the  is the  the body of the noteThis is is the  is the  the body of the noteThis is is the  is the  the body of the note',
-      timestamp: '2024-07-01T12:12:12Z',
-    },
-    {
-      title: format(add(new Date(), { days: -1 }), 'EEE do MMM'),
-      body: 'This is is the  is the  the body of the note',
-      timestamp: '2024-07-01T12:12:12Z',
-    },
   ];
 
   return (
@@ -85,7 +58,7 @@ const HeroGraphic = () => {
                     'linear-gradient(to left, transparent 0%, black 40px)',
                 }}
               >
-                {notes.map((n, i) => (
+                {NOTES_ITEMS.map((n, i) => (
                   <div
                     key={i}
                     className={

@@ -17,7 +17,7 @@ const HeroSection = () => {
             'text-5xl md:text-6xl font-theme-display text-center font-bold text-theme-text'
           }
         >
-          {APP_NAME}
+          {`${APP_NAME}.so`}
         </h1>
         {/*<div*/}
         {/*  className={*/}

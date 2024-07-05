@@ -19,45 +19,12 @@ import { useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import styles from './DatabaseSection.module.css';
 import { add, format } from 'date-fns';
-
-type Position = [x: number, y: number];
+import { NOTES_ITEMS, TODO_ITEMS } from '@/utils/constants';
 
 const DatabaseSection = () => {
-  const [todos, setTodos] = useState<{ label: string; checked: boolean }[]>([
-    { label: 'Schedule dinner with friends', checked: false },
-    { label: 'Finish writing notes for class', checked: false },
-    { label: 'Pick up groceries for dinner', checked: false },
-  ]);
+  const [todos, setTodos] = useState(TODO_ITEMS);
 
-  const [notes, setNotes] = useState<
-    { title: string; body: string; timestamp: string }[]
-  >([
-    {
-      title: format(add(new Date(), { days: -5 }), 'EEE do MMM'),
-      body: 'This is the is the  body of the note',
-      timestamp: '2024-07-01T12:12:12Z',
-    },
-    {
-      title: format(add(new Date(), { days: -4 }), 'EEE do MMM'),
-      body: 'This is the  is the  is the body of the note',
-      timestamp: '2024-07-01T12:12:12Z',
-    },
-    {
-      title: format(add(new Date(), { days: -3 }), 'EEE do MMM'),
-      body: 'This is the body of t is the  is the  is the he note',
-      timestamp: '2024-07-01T12:12:12Z',
-    },
-    {
-      title: format(add(new Date(), { days: -2 }), 'EEE do MMM'),
-      body: 'This is is the  is the  the body of the noteThe noteThe noteThe noteThe noteThe noteThe noteThe noteThis is is the  is the  the body of the noteThis is is the  is the  the body of the noteThis is is the  is the  the body of the note',
-      timestamp: '2024-07-01T12:12:12Z',
-    },
-    {
-      title: format(add(new Date(), { days: -1 }), 'EEE do MMM'),
-      body: 'This is is the  is the  the body of the note',
-      timestamp: '2024-07-01T12:12:12Z',
-    },
-  ]);
+  const [notes, setNotes] = useState(NOTES_ITEMS);
 
   const { ref: startRef, inView: startInView } = useInView();
   const { ref: endRef, inView: endInView } = useInView();

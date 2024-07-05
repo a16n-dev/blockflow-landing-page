@@ -15,6 +15,7 @@ import {
 } from 'lucide-react';
 import Color from 'color';
 import ComboBox from '@/components/common/ComboBox/ComboBox';
+import { TODO_ITEMS } from '@/utils/constants';
 
 enum themeColor {
   green = 'green',
@@ -72,12 +73,6 @@ const CustomizationInteractiveSection = () => {
     setTheme(mapStateToTheme(state));
   }, [state]);
 
-  const TODOS = [
-    { label: 'Schedule dinner with friends', checked: false },
-    { label: 'Finish writing notes for class', checked: true },
-    { label: 'Pick up groceries for dinner', checked: true },
-  ];
-
   return (
     <div className={'flex max-w-[1100px] w-full py-12 gap-4'}>
       <div className={'overflow-hidden flex justify-end -mr-24 md:mr-0'}>
@@ -112,7 +107,7 @@ const CustomizationInteractiveSection = () => {
                 </p>
               </div>
               <div className={'flex flex-col gap-4 mt-4'}>
-                {TODOS.map((item, i) => (
+                {TODO_ITEMS.map((item, i) => (
                   <div key={i} className={'flex gap-2 items-center'}>
                     {item.checked ? (
                       <div

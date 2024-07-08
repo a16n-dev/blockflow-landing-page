@@ -1,6 +1,4 @@
-import { APP_NAME } from '@/utils/constants';
 import styles from './JoinBetaSection.module.css';
-import JoinBetaForm from '@/components/common/JoinBetaForm/JoinBetaForm';
 import DiscordIcon from '@/components/common/DiscordIcon/DiscordIcon';
 const JoinBetaCondensedSection = () => {
   return (
@@ -20,7 +18,7 @@ const JoinBetaCondensedSection = () => {
             'mb-4 font-theme text-lg text-theme-bg text-center max-w-[600px]'
           }
         >
-          {`If you want a digital journaling tool with features created around your feedback, join the Discord to get beta access and we’ll be in touch!`}
+          {`If you want a digital journaling tool with features created around your feedback, join the Discord to get updates about beta access!`}
         </p>
         {/*<JoinBetaForm />*/}
         <a

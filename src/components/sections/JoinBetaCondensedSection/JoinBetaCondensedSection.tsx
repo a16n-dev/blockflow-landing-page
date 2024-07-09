@@ -19,7 +19,7 @@ const JoinBetaCondensedSection = () => {
             'mb-4 font-theme text-lg text-theme-bg text-center max-w-[600px]'
           }
         >
-          {`If you want a digital journaling tool with features created around your feedback, join the Discord to get updates about beta access!`}
+          {`If you want a digital planning tool with features created around your feedback, join the Discord to get updates about beta access!`}
         </p>
         {/*<JoinBetaForm />*/}
         <Link

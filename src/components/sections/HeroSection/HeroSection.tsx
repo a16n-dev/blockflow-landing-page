@@ -27,8 +27,8 @@ const HeroSection = () => {
         {/*  Beta*/}
         {/*</div>*/}
         <p className={'font-theme text-xl text-theme-text text-center mt-1'}>
-          Create journals to get your thoughts down, style them, and organize
-          your life. <br /> All in one place.
+          Get your thoughts down, style them, and organize your life. <br /> All
+          in one place.
         </p>
       </div>
       <HeroGraphic />

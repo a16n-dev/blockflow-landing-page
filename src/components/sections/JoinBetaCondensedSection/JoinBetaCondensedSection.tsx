@@ -1,5 +1,6 @@
 import styles from './JoinBetaSection.module.css';
 import DiscordIcon from '@/components/common/DiscordIcon/DiscordIcon';
+import Link from 'next/link';
 const JoinBetaCondensedSection = () => {
   return (
     <section className={'pb-16 pt-8 max-w-[932px] px-4 w-full mx-auto'}>
@@ -21,16 +22,16 @@ const JoinBetaCondensedSection = () => {
           {`If you want a digital journaling tool with features created around your feedback, join the Discord to get updates about beta access!`}
         </p>
         {/*<JoinBetaForm />*/}
-        <a
+        <Link
           className={
-            'rounded-md gap-2 flex text-white bg-[#5865F2] pl-4 pr-5 py-2 font-bold text-lg'
+            'rounded-md gap-2 flex items-center text-white bg-[#5865F2] pl-4 pr-5 py-2 font-bold text-lg'
           }
-          href={'https://discord.gg/CFfSXfyyHH'}
+          href={'/discord'}
           target={'_blank'}
         >
           <DiscordIcon />
           Join Discord
-        </a>
+        </Link>
       </div>
     </section>
   );

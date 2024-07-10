@@ -41,7 +41,7 @@ const DatabaseSection = () => {
         Notion-style Databases
       </h2>
       <p className={'text-theme-text font-theme text-lg text-center mt-1'}>
-        {`Entries like Tasks and Notes are recorded into your journal database`}
+        {`Entries like Tasks and Notes are recorded into databases in your planner`}
       </p>
       <div
         className={

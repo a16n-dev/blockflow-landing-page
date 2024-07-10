@@ -41,11 +41,11 @@ const MotivationSection = () => {
           </h2>
           <p
             className={'text-theme-text font-theme'}
-          >{`We love the functionality that Notion has, but it lacks the ability to really personalize the style and design.`}</p>
+          >{`We love the functionality that Notion has for organizing your life, but it lacks the ability to really personalize the style and design.`}</p>
           <br />
           <p
             className={'text-theme-text font-theme'}
-          >{`Apps like Zinnia and Goodnotes give you the customization for bullet journaling, but lack the powerful functionality that Notion’s databases offer.`}</p>
+          >{`Apps like Zinnia and Goodnotes let you create or use beautiful digital planners, but lack the powerful functionality that Notion’s databases offer.`}</p>
           <br />
           <p
             className={'text-theme-text font-theme'}

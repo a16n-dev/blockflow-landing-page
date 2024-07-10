@@ -104,7 +104,7 @@ const CustomizationSection = () => {
           {`Style How You’d Like`}
         </h2>
         <p className={'text-theme-text text-lg text-center mt-1 font-theme'}>
-          Letting you decide what your journals look like, while never
+          Letting you decide what your planner looks like, while never
           sacrificing simplicity
         </p>
       </div>

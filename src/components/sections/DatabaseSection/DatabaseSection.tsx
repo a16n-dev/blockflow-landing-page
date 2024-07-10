@@ -55,7 +55,7 @@ const DatabaseSection = () => {
           'font-medium mx-auto text-md max-w-[400px] text-theme-text font-theme text-center'
         }
       >
-        {`Display database entries in customized widget views, to keep things front of mind `}
+        {`Keep all the aspects of your life on your dashboard, to keep the important things front of mind `}
       </p>
       {/* Databases in isolation */}
       <div className={'overflow-y-hidden mt-4'}>

@@ -19,26 +19,12 @@ const HeroSection = () => {
         >
           {`${APP_NAME}.so`}
         </h1>
-        {/*<div*/}
-        {/*  className={*/}
-        {/*    'bg-theme-main-bg text-theme-main font-bold self-center px-2 rounded-md'*/}
-        {/*  }*/}
-        {/*>*/}
-        {/*  Beta*/}
-        {/*</div>*/}
+
         <p className={'font-theme text-xl text-theme-text text-center mt-1'}>
-          Get your thoughts down, style them, and organize your life. <br /> All
-          in one place.
+          Your all-in-one digital planner thats fully customizable!
         </p>
       </div>
       <HeroGraphic />
-      {/* Hero image/svg goes here */}
-      {/*<div className={'w-full aspect-video bg-theme-surface rounded-xl'} />*/}
-      {/*<Image*/}
-      {/*  src={heroImage}*/}
-      {/*  className={'max-w-[1080px]'}*/}
-      {/*  alt={'Example Journal layout'}*/}
-      {/*/>*/}
     </section>
   );
 };

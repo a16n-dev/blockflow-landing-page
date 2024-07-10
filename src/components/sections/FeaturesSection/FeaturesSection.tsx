@@ -85,8 +85,8 @@ const FeaturesSection = () => {
               </h3>
             </div>
             <p className={'text-theme-text font-theme'}>
-              Take your journals wherever you go, knowing you’ll always have
-              full access to your data.
+              Life takes you to all kinds of places, so we want to make sure you
+              can always access your life planner.
             </p>
             <div
               className={
@@ -108,7 +108,7 @@ const FeaturesSection = () => {
               </h3>
             </div>
             <p className={'text-theme-text font-theme'}>
-              We know the best ideas come from collaboration - share a journal
+              We know the best ideas come from collaboration - plan things out
               with your friends or your partner.
             </p>
             <div

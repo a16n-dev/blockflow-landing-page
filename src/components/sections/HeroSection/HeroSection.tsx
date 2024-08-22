@@ -1,6 +1,4 @@
 import { APP_NAME } from '@/utils/constants';
-import Image from 'next/image';
-import heroImage from './heroImage.png';
 import styles from './HeroSection.module.css';
 import Logo from '@/components/common/Logo/Logo';
 import HeroGraphic from '@/components/sections/HeroSection/HeroGraphic';

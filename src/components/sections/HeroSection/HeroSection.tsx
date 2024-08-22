@@ -21,7 +21,8 @@ const HeroSection = () => {
         </h1>
 
         <p className={'font-theme text-xl text-theme-text text-center mt-1'}>
-          Your all-in-one digital planner thats fully customizable!
+          Build your own digital planners that work for you and are completely
+          customizable!
         </p>
       </div>
       <HeroGraphic />
